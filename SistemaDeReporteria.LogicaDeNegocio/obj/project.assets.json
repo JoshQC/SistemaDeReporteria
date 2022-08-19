@@ -1,0 +1,112 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "SistemaDeReporteria.Datos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "SistemaDeReporteria.Modelos": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SistemaDeReporteria.Datos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SistemaDeReporteria.Datos.dll": {}
+        }
+      },
+      "SistemaDeReporteria.Modelos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/SistemaDeReporteria.Modelos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SistemaDeReporteria.Modelos.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SistemaDeReporteria.Datos/1.0.0": {
+      "type": "project",
+      "path": "../SistemaDeReporteria.Datos/SistemaDeReporteria.Datos.csproj",
+      "msbuildProject": "../SistemaDeReporteria.Datos/SistemaDeReporteria.Datos.csproj"
+    },
+    "SistemaDeReporteria.Modelos/1.0.0": {
+      "type": "project",
+      "path": "../SistemaDeReporteria.Modelos/SistemaDeReporteria.Modelos.csproj",
+      "msbuildProject": "../SistemaDeReporteria.Modelos/SistemaDeReporteria.Modelos.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "SistemaDeReporteria.Datos >= 1.0.0",
+      "SistemaDeReporteria.Modelos >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\u\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\SistemaDeReporteria\\SistemaDeReporteria.LogicaDeNegocio\\SistemaDeReporteria.LogicaDeNegocio.csproj",
+      "projectName": "SistemaDeReporteria.LogicaDeNegocio",
+      "projectPath": "E:\\SistemaDeReporteria\\SistemaDeReporteria.LogicaDeNegocio\\SistemaDeReporteria.LogicaDeNegocio.csproj",
+      "packagesPath": "C:\\Users\\u\\.nuget\\packages\\",
+      "outputPath": "E:\\SistemaDeReporteria\\SistemaDeReporteria.LogicaDeNegocio\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\u\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "E:\\SistemaDeReporteria\\SistemaDeReporteria.Datos\\SistemaDeReporteria.Datos.csproj": {
+              "projectPath": "E:\\SistemaDeReporteria\\SistemaDeReporteria.Datos\\SistemaDeReporteria.Datos.csproj"
+            },
+            "E:\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj": {
+              "projectPath": "E:\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

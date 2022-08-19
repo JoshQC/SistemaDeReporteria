@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "SistemaDeReporteria.LogicaDeNegocio/1.0.0": {
+        "dependencies": {
+          "SistemaDeReporteria.Datos": "1.0.0",
+          "SistemaDeReporteria.Modelos": "1.0.0"
+        },
+        "runtime": {
+          "SistemaDeReporteria.LogicaDeNegocio.dll": {}
+        }
+      },
+      "SistemaDeReporteria.Datos/1.0.0": {
+        "dependencies": {
+          "SistemaDeReporteria.Modelos": "1.0.0"
+        },
+        "runtime": {
+          "SistemaDeReporteria.Datos.dll": {}
+        }
+      },
+      "SistemaDeReporteria.Modelos/1.0.0": {
+        "runtime": {
+          "SistemaDeReporteria.Modelos.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SistemaDeReporteria.LogicaDeNegocio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SistemaDeReporteria.Datos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SistemaDeReporteria.Modelos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

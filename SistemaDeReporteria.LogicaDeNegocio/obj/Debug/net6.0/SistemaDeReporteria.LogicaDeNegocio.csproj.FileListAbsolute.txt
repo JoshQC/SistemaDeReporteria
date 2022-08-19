@@ -1,0 +1,17 @@
+E:\SistemaDeReporteria\SistemaDeReporteria.LogicaDeNegocio\bin\Debug\net6.0\SistemaDeReporteria.LogicaDeNegocio.deps.json
+E:\SistemaDeReporteria\SistemaDeReporteria.LogicaDeNegocio\bin\Debug\net6.0\SistemaDeReporteria.LogicaDeNegocio.dll
+E:\SistemaDeReporteria\SistemaDeReporteria.LogicaDeNegocio\bin\Debug\net6.0\SistemaDeReporteria.LogicaDeNegocio.pdb
+E:\SistemaDeReporteria\SistemaDeReporteria.LogicaDeNegocio\obj\Debug\net6.0\SistemaDeReporteria.LogicaDeNegocio.csproj.AssemblyReference.cache
+E:\SistemaDeReporteria\SistemaDeReporteria.LogicaDeNegocio\obj\Debug\net6.0\SistemaDeReporteria.LogicaDeNegocio.GeneratedMSBuildEditorConfig.editorconfig
+E:\SistemaDeReporteria\SistemaDeReporteria.LogicaDeNegocio\obj\Debug\net6.0\SistemaDeReporteria.LogicaDeNegocio.AssemblyInfoInputs.cache
+E:\SistemaDeReporteria\SistemaDeReporteria.LogicaDeNegocio\obj\Debug\net6.0\SistemaDeReporteria.LogicaDeNegocio.AssemblyInfo.cs
+E:\SistemaDeReporteria\SistemaDeReporteria.LogicaDeNegocio\obj\Debug\net6.0\SistemaDeReporteria.LogicaDeNegocio.csproj.CoreCompileInputs.cache
+E:\SistemaDeReporteria\SistemaDeReporteria.LogicaDeNegocio\obj\Debug\net6.0\SistemaDeReporteria.LogicaDeNegocio.dll
+E:\SistemaDeReporteria\SistemaDeReporteria.LogicaDeNegocio\obj\Debug\net6.0\refint\SistemaDeReporteria.LogicaDeNegocio.dll
+E:\SistemaDeReporteria\SistemaDeReporteria.LogicaDeNegocio\obj\Debug\net6.0\SistemaDeReporteria.LogicaDeNegocio.pdb
+E:\SistemaDeReporteria\SistemaDeReporteria.LogicaDeNegocio\obj\Debug\net6.0\ref\SistemaDeReporteria.LogicaDeNegocio.dll
+E:\SistemaDeReporteria\SistemaDeReporteria.LogicaDeNegocio\bin\Debug\net6.0\SistemaDeReporteria.Datos.dll
+E:\SistemaDeReporteria\SistemaDeReporteria.LogicaDeNegocio\bin\Debug\net6.0\SistemaDeReporteria.Modelos.dll
+E:\SistemaDeReporteria\SistemaDeReporteria.LogicaDeNegocio\bin\Debug\net6.0\SistemaDeReporteria.Datos.pdb
+E:\SistemaDeReporteria\SistemaDeReporteria.LogicaDeNegocio\bin\Debug\net6.0\SistemaDeReporteria.Modelos.pdb
+E:\SistemaDeReporteria\SistemaDeReporteria.LogicaDeNegocio\obj\Debug\net6.0\SistemaDeReporteria.LogicaDeNegocio.csproj.CopyComplete

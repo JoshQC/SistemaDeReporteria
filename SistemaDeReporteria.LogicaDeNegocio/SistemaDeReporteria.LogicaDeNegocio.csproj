@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaDeReporteria.Datos\SistemaDeReporteria.Datos.csproj" />
+    <ProjectReference Include="..\SistemaDeReporteria.Modelos\SistemaDeReporteria.Modelos.csproj" />
+  </ItemGroup>
+
+</Project>

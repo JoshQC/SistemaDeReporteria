@@ -1,0 +1,15 @@
+E:\SistemaDeReporteria\SistemaDeReporteria.Datos\bin\Debug\net6.0\SistemaDeReporteria.Datos.deps.json
+E:\SistemaDeReporteria\SistemaDeReporteria.Datos\bin\Debug\net6.0\SistemaDeReporteria.Datos.dll
+E:\SistemaDeReporteria\SistemaDeReporteria.Datos\bin\Debug\net6.0\SistemaDeReporteria.Datos.pdb
+E:\SistemaDeReporteria\SistemaDeReporteria.Datos\obj\Debug\net6.0\SistemaDeReporteria.Datos.csproj.AssemblyReference.cache
+E:\SistemaDeReporteria\SistemaDeReporteria.Datos\obj\Debug\net6.0\SistemaDeReporteria.Datos.GeneratedMSBuildEditorConfig.editorconfig
+E:\SistemaDeReporteria\SistemaDeReporteria.Datos\obj\Debug\net6.0\SistemaDeReporteria.Datos.AssemblyInfoInputs.cache
+E:\SistemaDeReporteria\SistemaDeReporteria.Datos\obj\Debug\net6.0\SistemaDeReporteria.Datos.AssemblyInfo.cs
+E:\SistemaDeReporteria\SistemaDeReporteria.Datos\obj\Debug\net6.0\SistemaDeReporteria.Datos.csproj.CoreCompileInputs.cache
+E:\SistemaDeReporteria\SistemaDeReporteria.Datos\obj\Debug\net6.0\SistemaDeReporteria.Datos.dll
+E:\SistemaDeReporteria\SistemaDeReporteria.Datos\obj\Debug\net6.0\refint\SistemaDeReporteria.Datos.dll
+E:\SistemaDeReporteria\SistemaDeReporteria.Datos\obj\Debug\net6.0\SistemaDeReporteria.Datos.pdb
+E:\SistemaDeReporteria\SistemaDeReporteria.Datos\obj\Debug\net6.0\ref\SistemaDeReporteria.Datos.dll
+E:\SistemaDeReporteria\SistemaDeReporteria.Datos\bin\Debug\net6.0\SistemaDeReporteria.Modelos.dll
+E:\SistemaDeReporteria\SistemaDeReporteria.Datos\bin\Debug\net6.0\SistemaDeReporteria.Modelos.pdb
+E:\SistemaDeReporteria\SistemaDeReporteria.Datos\obj\Debug\net6.0\SistemaDeReporteria.Datos.csproj.CopyComplete
