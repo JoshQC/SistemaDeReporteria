@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SistemaDeReporteria.AplicacionWeb.Models;
-using System.Diagnostics;
 
 namespace SistemaDeReporteria.AplicacionWeb.Controllers
 {
@@ -23,10 +21,5 @@ namespace SistemaDeReporteria.AplicacionWeb.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }

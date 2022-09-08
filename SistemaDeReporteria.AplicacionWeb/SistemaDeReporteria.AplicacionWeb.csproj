@@ -11,4 +11,9 @@
     <ProjectReference Include="..\SistemaDeReporteria.Modelos\SistemaDeReporteria.Modelos.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="wwwroot\lib\" />
+  </ItemGroup>
+
 </Project>
