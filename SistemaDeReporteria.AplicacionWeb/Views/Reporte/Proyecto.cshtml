@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Proyectos de Investigacion";
+}
+<h1>@ViewData["Title"]</h1>
+
+@{
+    var variablesDeProyecto = new Dictionary<string, string>()
+    {
+        {"codigo","text"},
+        {"titulo","text"},
+        {"estado","text"},
+        {"tipo","text"},
+        {"area-cientifica","text"},
+        {"objetivo-socioeconomico","text"},
+        {"eje-de-planes","text"},
+        {"unidad-de-investigacion","text"},
+        {"fecha-de-inicio","text"},
+        {"fecha-de-finalizacion","text"},
+        {"cantones","text"},
+        {"regiones","text"},
+        {"objetivo-de-desarrollo-sostenible","text"},
+    };
+
+    foreach (KeyValuePair<string, string> variable in variablesDeProyecto)
+    {
+        <div class="contenedor-input-variable">
+            <input id=@variable.Key type="checkbox" name=@variable.Key/>
+            <label class="lb-variable" for=@variable.Key>@variable.Key.Replace('-',' ')</label>
+        </div>
+    }  
+}

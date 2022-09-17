@@ -3,22 +3,31 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sistema De Reporteria</title>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SistemaDeReporteria.AplicacionWeb.styles.css" asp-append-version="true" />
+    <title>Sistema De Reportería</title>
 </head>
 <body>
     <header>
         <nav class="nav-bar">
-            <a asp-area="" asp-controller="Home" asp-action="Index">
+            <a asp-controller="Home" asp-action="Index">
                 <img class="logo" src="~/images/graph.svg" alt="logo"/>
             </a>
             <ul class="nav-bar-items">
                 <li>
-                    <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    <a asp-controller="Reporte" asp-action="Proyecto">Proyectos</a>
                 </li>
                 <li>
-                    <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    <a asp-controller="Reporte" asp-action="Investigador">Investigadores</a>
+                </li>
+                <li>
+                    <a asp-controller="Reporte" asp-action="InvestigadorXProyecto">Investigador por Proyecto</a>
+                </li>
+                <li>
+                    <a asp-controller="Reporte" asp-action="Reporte">Reporte</a>
+                </li>
+                <li>
+                    <a asp-controller="Reporte" asp-action="">Ir a Gestiona</a>
                 </li>
             </ul>
         </nav>
@@ -29,12 +38,13 @@
     </main>
     
 
-    <footer>
+    <footer  class="copyright">
         <div>
-            &copy; 2022 - Sistema De Reporteria
+            &copy; 2022 - Sistema De Reportería
         </div>
     </footer>
 
+    <script src="~/lib/chart.min.js" asp-append-version="true"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @*@await RenderSectionAsync("Scripts", required: false)*@
 </body>

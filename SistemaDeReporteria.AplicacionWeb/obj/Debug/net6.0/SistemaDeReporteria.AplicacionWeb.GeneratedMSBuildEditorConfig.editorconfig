@@ -15,12 +15,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/SistemaDeReporteria/SistemaDeReporteria.AplicacionWeb/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[E:/SistemaDeReporteria/SistemaDeReporteria.AplicacionWeb/Views/Reporte/Investigador.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZVxJbnZlc3RpZ2Fkb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/SistemaDeReporteria/SistemaDeReporteria.AplicacionWeb/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[E:/SistemaDeReporteria/SistemaDeReporteria.AplicacionWeb/Views/Reporte/InvestigadorXProyecto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZVxJbnZlc3RpZ2Fkb3JYUHJveWVjdG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/SistemaDeReporteria/SistemaDeReporteria.AplicacionWeb/Views/Reporte/Proyecto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZVxQcm95ZWN0by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/SistemaDeReporteria/SistemaDeReporteria.AplicacionWeb/Views/Reporte/Reporte.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZVxSZXBvcnRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/SistemaDeReporteria/SistemaDeReporteria.AplicacionWeb/Views/_ViewImports.cshtml]

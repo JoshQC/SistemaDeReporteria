@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nD3uUdJHeaBD8vi5IYYXC7P9z3NCauxHVHrIvymT0tI=",
+  "Hash": "38RTMt7R8gnqHYJexlsHI61Ur5iiP1QeTiCXnRvLjUo=",
   "Source": "SistemaDeReporteria.AplicacionWeb",
   "BasePath": "_content/SistemaDeReporteria.AplicacionWeb",
   "Mode": "Default",
@@ -117,6 +117,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "E:\\SistemaDeReporteria\\SistemaDeReporteria.AplicacionWeb\\wwwroot\\lib\\chart.js",
+      "SourceId": "SistemaDeReporteria.AplicacionWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\SistemaDeReporteria\\SistemaDeReporteria.AplicacionWeb\\wwwroot\\",
+      "BasePath": "_content/SistemaDeReporteria.AplicacionWeb",
+      "RelativePath": "lib/chart.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\chart.js"
+    },
+    {
+      "Identity": "E:\\SistemaDeReporteria\\SistemaDeReporteria.AplicacionWeb\\wwwroot\\lib\\chart.min.js",
+      "SourceId": "SistemaDeReporteria.AplicacionWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\SistemaDeReporteria\\SistemaDeReporteria.AplicacionWeb\\wwwroot\\",
+      "BasePath": "_content/SistemaDeReporteria.AplicacionWeb",
+      "RelativePath": "lib/chart.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\chart.min.js"
     }
   ]
 }
