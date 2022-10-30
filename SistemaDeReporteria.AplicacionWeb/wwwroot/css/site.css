@@ -13,6 +13,11 @@
     font-family: Calibri;
 }
 
+main {
+    display:flex;
+    justify-content:center;
+}
+
 a {
     text-decoration: none;
 }
@@ -99,6 +104,52 @@ table, th, td {
 
 .lb-variable {
     text-transform: capitalize;
+}
+
+.tarjeta {
+    padding: 10px;
+    width: 40%;
+    border: var(--border-grey);
+    border-radius: 3%;
+    box-shadow: 1px 2px 10px grey;
+}
+
+.tarjeta-checkbox-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: var(--border-grey);
+    border-radius:2%;
+    margin-bottom:1rem;
+}
+
+.contenedor-check-variable {
+    margin:0.4rem;
+}
+
+form {
+    width:100%;
+}
+
+    form div {
+        width:100%;
+        text-align:center;
+    }
+
+        form div div {
+            margin:3px 5px;
+        }
+
+.form-contenedor-botones {
+    width:100%;
+    margin-top: 20px;
+    display:flex;
+    justify-content:space-around;
+}
+
+.show {
+    display: block;
 }
 
 @media (min-width: 768px) {

@@ -2,3 +2,26 @@
     ViewData["Title"] = "Investigadores";
 }
 <h1>@ViewData["Title"]</h1>
+
+
+<fieldset>
+    <legend>Listar investigadores segun:</legend>
+    @{
+        var variablesDeInvestigadores = new Dictionary<string, string>()
+        {
+            {"grado-academico","text"},
+            {"edad","text"},
+            {"sexo","text"}
+        };
+            
+        foreach (KeyValuePair<string, string> variable in variablesDeInvestigadores)
+        {
+            <div class="contenedor-input-variable">
+                <input id=@variable.Key type="radio" name="investigador" value=@variable.Key />
+                <label class="lb-variable" for=@variable.Key>@variable.Key.Replace('-',' ')</label>
+            </div>
+        }
+     }
+</fieldset>
+
+   
