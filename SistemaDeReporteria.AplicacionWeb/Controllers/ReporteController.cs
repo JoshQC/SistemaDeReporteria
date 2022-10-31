@@ -11,6 +11,11 @@ namespace SistemaDeReporteria.AplicacionWeb.Controllers
             _logger = logger;
         }
 
+        public IActionResult Index()
+        {
+            return View();
+        }
+
         public IActionResult Proyecto()
         {
             return View();

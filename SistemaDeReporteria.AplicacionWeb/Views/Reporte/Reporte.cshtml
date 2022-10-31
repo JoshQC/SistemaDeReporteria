@@ -9,6 +9,7 @@
         <h2>Titulo grafico</h2>
         <canvas id="graphic" ></canvas>
     </div>
+    <button class="btn" id="btn_descargar" type="button">Descargar</button>
 
     <div class="table-reporte">
         <table>
@@ -37,4 +38,22 @@
     </div>
 </div>
 
+@section Scripts
+{
+    <script type="text/javascript">
+        const canvas = document.getElementById('graphic');
+        
+        const handleOnClick = () => {
+            const btnDescargar = document.getElementById('btn_descargar');
+            btnDescargar.addEventListener('click', () => {
+                let link = document.createElement('a');
+                link.download = 'Grafico.jpg';
+                link.href = canvas.toDataURL('image/jpeg', 1.0);
+                link.click();
+            })
+        }
+
+        handleOnClick();
+    </script>
+}
 

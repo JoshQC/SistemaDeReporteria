@@ -1,27 +1,71 @@
-﻿@{
+﻿@using SistemaDeReporteria.AplicacionWeb.Models
+@model VariablesInvestigador
+@{
     ViewData["Title"] = "Investigadores";
 }
-<h1>@ViewData["Title"]</h1>
 
+<div class="tarjeta">
+    <h1>@ViewData["Title"]</h1>
+    <fieldset class="tarjeta-checkbox-area">
+        <legend>Listar investigadores segun:</legend>
+        @{
+            VariablesInvestigador varInvestigador = new();
+            Type tipo = varInvestigador.GetType();
 
-<fieldset>
-    <legend>Listar investigadores segun:</legend>
-    @{
-        var variablesDeInvestigadores = new Dictionary<string, string>()
-        {
-            {"grado-academico","text"},
-            {"edad","text"},
-            {"sexo","text"}
-        };
-            
-        foreach (KeyValuePair<string, string> variable in variablesDeInvestigadores)
-        {
-            <div class="contenedor-input-variable">
-                <input id=@variable.Key type="radio" name="investigador" value=@variable.Key />
-                <label class="lb-variable" for=@variable.Key>@variable.Key.Replace('-',' ')</label>
-            </div>
+            foreach (System.Reflection.PropertyInfo property in tipo.GetProperties())
+            {
+                string id = "ck_" + property.Name.ToLower().Replace('_','-');
+                <div class="contenedor-check-variable">
+                    <input id=@id type="checkbox" name=@property.Name/>
+                    <label class="lb-variable" for=@property.Name>@property.Name.Replace('_',' ')</label>                               
+                </div>
+            }
         }
-     }
-</fieldset>
+    </fieldset>
+    
+    <form>
+        <div>
+            @{
+            foreach (System.Reflection.PropertyInfo property in tipo.GetProperties())
+            {
+                string id = "contenedor_" + property.Name.ToLower().Replace('_','-');
+                <div id=@id hidden>
+                    <label class="lb-variable" for=@property.Name>@property.Name.Replace('_',' ')</label> <br/>
+                    @Html.Editor(property.Name)
+                </div>   
+            }
+        }
+        </div>
+        
+        <div class="form-contenedor-botones">
+            <button class="btn" type="submit">Enviar</button>
+            <button class="btn" type="reset">Limpiar</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts
+{
+    <script type="text/javascript">
+        const variables = ["grado-academico", "edad", "sexo"]
+
+        const agregarEventoToggle = (variables) => {
+            variables.forEach((variable) => {
+                const ck = document.getElementById(`ck_${variable}`);
+                const contenedor = document.getElementById(`contenedor_${variable}`);
+                ck.addEventListener('change', () => {
+                    contenedor.classList.toggle("show");
+                })
+            });
+        }
+        agregarEventoToggle(variables);
+    </script>
+}
+
+
+
+    
+
+
 
    

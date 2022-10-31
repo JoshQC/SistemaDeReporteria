@@ -4,6 +4,7 @@
     --navBar-a-color-hover: #17325A;
     --border-grey: 1px solid grey;
     --footer-backColor: #2d9bbf;
+    --btn-color: #17325A;
 }
 
 * {
@@ -148,9 +149,53 @@ form {
     justify-content:space-around;
 }
 
-.show {
-    display: block;
+.btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: var(--btn-color);
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 5px #999;
 }
 
-@media (min-width: 768px) {
+    .btn:hover {
+        background-color: #365f98;
+    }
+
+    .btn:active {
+        box-shadow: 0 1.5px #666;
+        transform:translateY(4px); 
+    }
+
+.show {
+    display: block;
+    margin: 10px 0;
+    width:100%;
+    position:relative;
 }
+
+    .show input {
+        width:60%;
+        padding:6px;
+        outline:none;
+        border:none;
+        border-bottom:var(--border-grey);
+    }
+
+        .show input:focus, .show input:hover {
+            border-bottom: 1px solid black;
+        }
+
+    .show label {
+        position:absolute;
+        left:20%;
+    }
+
+
+    @media (min-width: 768px) {
+    }
