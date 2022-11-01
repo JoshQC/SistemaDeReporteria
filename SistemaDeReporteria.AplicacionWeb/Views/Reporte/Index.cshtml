@@ -3,10 +3,25 @@
     ViewData["Title"] = "Ir a...";
 }
 
-<h1>@ViewData["Title"]</h1>
+<section class="index">
+    <h1>@ViewData["Title"]</h1>
 
-<a class="btn" asp-controller="Reporte" asp-action="Proyecto">Proyectos</a>
+    <div class="contenedor-tarjetas">
+        <div class="tarjeta">
+            <p class="descripcion">De acuerdo con las variables de Proyectos de Investigación, genere reportes dinámicos</p>
+            <a class="btn" asp-controller="Reporte" asp-action="Proyecto">Proyectos</a>
+        </div>
 
-<a class="btn" asp-controller="Reporte" asp-action="Investigador">Investigadores</a>
+        <div class="tarjeta">
+            <p class="descripcion">De acuerdo con las variables de Investigadores, liste los principales datos</p>
+            <a class="btn" asp-controller="Reporte" asp-action="Investigador">Investigadores</a>
+        </div>
 
-<a class="btn" asp-controller="Reporte" asp-action="InvestigadorXProyecto">Investigador por Proyecto</a>
+        <div class="tarjeta">
+            <p class="descripcion">De acuerdo con las variables de Investigadores por Proyecto, liste proyectos considerando las variables de ambas partes</p>
+            <a class="btn" asp-controller="Reporte" asp-action="InvestigadorXProyecto">Investigadores por Proyecto</a>
+        </div>
+    </div>
+</section>
+
+

@@ -1,9 +1,9 @@
 :root {
-    --navBar-backColor: #2d9bbf;
+    --main-backColor: #00519E;
     --navBar-a-color: white;
     --navBar-a-color-hover: #17325A;
     --border-grey: 1px solid grey;
-    --footer-backColor: #2d9bbf;
+    --second-backColor: #FFC211;
     --btn-color: #17325A;
 }
 
@@ -11,12 +11,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Calibri;
+    font-family:Arial;
 }
 
 main {
     display:flex;
     justify-content:center;
+}
+
+.index {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
 a {
@@ -26,12 +35,13 @@ a {
 .nav-bar {
     margin-bottom: 1rem;
     padding: 0.5rem;
-    background-color: var(--navBar-backColor);
+    background-color: var(--main-backColor);
     height: 8vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0.5px 2px 10px grey;
+    border-bottom:2px solid var(--second-backColor);
 }
 
     .nav-bar a {
@@ -44,9 +54,19 @@ a {
             color: var(--navBar-a-color-hover);
         }
 
+.contenedor-logo {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: white;
+    position:relative;
+}
 .logo {
-    width: 5rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4.3rem;
+    position:absolute;
+    top:16px;
+    left:15px;
 }
 
 .nav-bar-items {
@@ -56,14 +76,15 @@ a {
     justify-content: end;
 }
 
-.copyright {
+.footer {
     width: 100%;
     height: 5vh;
-    background-color: var(--footer-backColor);
+    background-color: var(--main-backColor);
     position: absolute;
     bottom: 0;
     display: flex;
     align-items: center;
+    color:white;
 }
 
 .container-reporte {
@@ -107,9 +128,28 @@ table, th, td {
     text-transform: capitalize;
 }
 
+.contenedor-tarjetas {
+    width:50%;
+    height:70vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+    .contenedor-tarjetas .tarjeta {
+        padding:30px;
+        border-radius:30%;
+    }
+.descripcion {
+    text-align: justify;
+    margin-bottom:15px;
+}
 .tarjeta {
     padding: 10px;
     width: 40%;
+    margin: 10px;
     border: var(--border-grey);
     border-radius: 3%;
     box-shadow: 1px 2px 10px grey;
