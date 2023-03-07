@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CL+oYW9TyEDJ9iZp6HFmE41LLaKqRWiRKvK4GUphLpNpVHEzsinL2BryjS7wsg1+1zEOQv8dUfjcwyQ2KhZ8sg==",
+  "dgSpecHash": "BUOCyOZB2poaMsuhOYrU4Ii0RfDwb6h/VafUrPNWIShBzyUN5fltKfkCuVcAO4n+9ThyOGV8XsEDLGZ10clmEw==",
   "success": true,
-  "projectFilePath": "E:\\SistemaDeReporteria\\SistemaDeReporteria.AplicacionWeb\\SistemaDeReporteria.AplicacionWeb.csproj",
+  "projectFilePath": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.AplicacionWeb\\SistemaDeReporteria.AplicacionWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\u\\.nuget\\packages\\chart.js\\3.7.1\\chart.js.3.7.1.nupkg.sha512",
     "C:\\Users\\u\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

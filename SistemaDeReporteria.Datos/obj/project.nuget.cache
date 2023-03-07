@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jqlkUpK4goXBzlSfowlfDqt6JO0FTP6frc3owIKFYiYIGclOdIsAlLDdF+l5spo53QoCvOAgGS01ksTngNcx4A==",
+  "dgSpecHash": "TLI1yXYljeOp/fRHFZFuHDQHyTDFC/ahUwCS6Ql00MooxNB2gx2bBf0I91ek0i16XeB562UeKk37WxuLag6Jkg==",
   "success": true,
-  "projectFilePath": "E:\\SistemaDeReporteria\\SistemaDeReporteria.Datos\\SistemaDeReporteria.Datos.csproj",
+  "projectFilePath": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Datos\\SistemaDeReporteria.Datos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\u\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\u\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",

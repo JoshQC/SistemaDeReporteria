@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ocxq9A8lZehp2vO7Srp12fHHtFbWbV2YAaAV+5PR/7RxX5z+NqhFe48y9Sd0j6T+I6nWbwZLRdplHj8KldmOkA==",
+  "dgSpecHash": "I/FYmnL+BndXTIMqrF4MxJ+rtgGBv+uigARpMgTCe/H5GQJ6gJAthzDwJyrELfAKhgrWQfGmppQM/wCWe1t53g==",
   "success": true,
-  "projectFilePath": "E:\\SistemaDeReporteria\\SistemaDeReporteria.LogicaDeNegocio\\SistemaDeReporteria.LogicaDeNegocio.csproj",
+  "projectFilePath": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.LogicaDeNegocio\\SistemaDeReporteria.LogicaDeNegocio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\u\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\u\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",

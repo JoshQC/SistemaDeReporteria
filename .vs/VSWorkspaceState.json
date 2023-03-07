@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.config",
+    "\\SistemaDeReporteria.AplicacionWeb\\bin",
+    "\\SistemaDeReporteria.AplicacionWeb\\bin\\Debug",
+    "\\SistemaDeReporteria.AplicacionWeb\\bin\\Debug\\net6.0\\runtimes",
+    "\\SistemaDeReporteria.AplicacionWeb\\bin\\Debug\\net6.0\\runtimes\\win",
+    "\\SistemaDeReporteria.AplicacionWeb\\bin\\Release\\net6.0",
+    "\\SistemaDeReporteria.AplicacionWeb\\Controllers",
+    "\\SistemaDeReporteria.AplicacionWeb\\Views",
+    "\\SistemaDeReporteria.AplicacionWeb\\Views\\Shared"
+  ],
+  "SelectedNode": "\\SistemaDeReporteria.AplicacionWeb",
+  "PreviewInSolutionExplorer": false
+}

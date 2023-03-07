@@ -2,60 +2,55 @@
     ViewData["Title"] = "Investigadores por Proyecto";
 }
 
-<div class="tarjeta">
-    <h1>@ViewData["Title"]</h1>
-    <fieldset class="tarjeta-checkbox-area">
-        <legend>Listar proyectos segun:</legend>
-        @{
-            VariablesInvestigadorXProyecto varInvestigadorXProyecto = new();
-            Type tipo = varInvestigadorXProyecto.GetType();
-
-            foreach (System.Reflection.PropertyInfo property in tipo.GetProperties())
-            {
-                string id = "ck_" + property.Name.ToLower().Replace('_','-');
-                <div class="contenedor-check-variable">
-                    <input id=@id type="checkbox" name=@property.Name/>
-                    <label class="lb-variable" for=@property.Name>@property.Name.Replace('_',' ')</label>                               
-                </div>
-            }
-        }
-    </fieldset>
-    
-    <form>
-        <div>
+<section>
+    <div class="tarjeta">
+        <h1 class="titulo-pagina">@ViewData["Title"]</h1>
+        <fieldset class="tarjeta-checkbox-area">
+            <legend>Listar proyectos segun:</legend>
             @{
-            foreach (System.Reflection.PropertyInfo property in tipo.GetProperties())
-            {
-                string id = "contenedor_" + property.Name.ToLower().Replace('_','-');
-                <div id=@id hidden>
-                    <label class="lb-variable" for=@property.Name>@property.Name.Replace('_',' ')</label> <br/>
-                    @Html.Editor(property.Name)
-                </div>   
+                VariablesInvestigadorXProyecto varInvestigadorXProyecto = new();
+                Type tipo = varInvestigadorXProyecto.GetType();
+
+                foreach (System.Reflection.PropertyInfo property in tipo.GetProperties())
+                {
+                    string id = "ck_" + property.Name.ToLower().Replace('_','-');
+                    <div class="contenedor-check-variable">
+                        <input id=@id type="checkbox" name=@property.Name/>
+                        <label class="lb-variable" for=@property.Name>@property.Name.Replace('_',' ')</label>                               
+                    </div>
+                }
             }
-        }
-        </div>
+        </fieldset>
+    
+        <form>
+            <div>
+                @{
+                foreach (System.Reflection.PropertyInfo property in tipo.GetProperties())
+                {
+                    string id = "contenedor_" + property.Name.ToLower().Replace('_','-');
+                    <div id=@id hidden>
+                        <label class="lb-variable" for=@property.Name>@property.Name.Replace('_',' ')</label> <br/>
+                        @Html.Editor(property.Name)
+                    </div>   
+                }
+            }
+            </div>
         
-        <div class="form-contenedor-botones">
-            <button class="btn" type="submit">Enviar</button>
-            <button class="btn" type="reset">Limpiar</button>
-        </div>
-    </form>
-</div>
+            <div class="form-contenedor-botones">
+                <button class="btn" type="submit">Enviar</button>
+                <button class="btn" type="reset">Limpiar</button>
+            </div>
+        </form>
+    </div>
+</section>
+
 
 @section Scripts
 {
     <script type="text/javascript">
         const variables = ["estado", "nombre-del-investigador", "fecha-de-inicio", "area-cientifica", "edad"]
-
-        const agregarEventoToggle = (variables) => {
-            variables.forEach((variable) => {
-                const ck = document.getElementById(`ck_${variable}`);
-                const contenedor = document.getElementById(`contenedor_${variable}`);
-                ck.addEventListener('change', () => {
-                    contenedor.classList.toggle("show");
-                })
-            });
-        }
+        
+        validarCantidadCheckboxActivos();
         agregarEventoToggle(variables);
     </script>
 }

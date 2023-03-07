@@ -10,3 +10,15 @@ E:\SistemaDeReporteria\SistemaDeReporteria.Modelos\obj\Debug\net6.0\SistemaDeRep
 E:\SistemaDeReporteria\SistemaDeReporteria.Modelos\obj\Debug\net6.0\refint\SistemaDeReporteria.Modelos.dll
 E:\SistemaDeReporteria\SistemaDeReporteria.Modelos\obj\Debug\net6.0\SistemaDeReporteria.Modelos.pdb
 E:\SistemaDeReporteria\SistemaDeReporteria.Modelos\obj\Debug\net6.0\ref\SistemaDeReporteria.Modelos.dll
+E:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.Modelos\bin\Debug\net6.0\SistemaDeReporteria.Modelos.deps.json
+E:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.Modelos\bin\Debug\net6.0\SistemaDeReporteria.Modelos.dll
+E:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.Modelos\bin\Debug\net6.0\SistemaDeReporteria.Modelos.pdb
+E:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.Modelos\obj\Debug\net6.0\SistemaDeReporteria.Modelos.csproj.AssemblyReference.cache
+E:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.Modelos\obj\Debug\net6.0\SistemaDeReporteria.Modelos.GeneratedMSBuildEditorConfig.editorconfig
+E:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.Modelos\obj\Debug\net6.0\SistemaDeReporteria.Modelos.AssemblyInfoInputs.cache
+E:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.Modelos\obj\Debug\net6.0\SistemaDeReporteria.Modelos.AssemblyInfo.cs
+E:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.Modelos\obj\Debug\net6.0\SistemaDeReporteria.Modelos.csproj.CoreCompileInputs.cache
+E:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.Modelos\obj\Debug\net6.0\SistemaDeReporteria.Modelos.dll
+E:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.Modelos\obj\Debug\net6.0\refint\SistemaDeReporteria.Modelos.dll
+E:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.Modelos\obj\Debug\net6.0\SistemaDeReporteria.Modelos.pdb
+E:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.Modelos\obj\Debug\net6.0\ref\SistemaDeReporteria.Modelos.dll

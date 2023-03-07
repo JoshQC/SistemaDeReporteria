@@ -778,11 +778,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\SistemaDeReporteria\\SistemaDeReporteria.AplicacionWeb\\SistemaDeReporteria.AplicacionWeb.csproj",
+      "projectUniqueName": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.AplicacionWeb\\SistemaDeReporteria.AplicacionWeb.csproj",
       "projectName": "SistemaDeReporteria.AplicacionWeb",
-      "projectPath": "E:\\SistemaDeReporteria\\SistemaDeReporteria.AplicacionWeb\\SistemaDeReporteria.AplicacionWeb.csproj",
+      "projectPath": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.AplicacionWeb\\SistemaDeReporteria.AplicacionWeb.csproj",
       "packagesPath": "C:\\Users\\u\\.nuget\\packages\\",
-      "outputPath": "E:\\SistemaDeReporteria\\SistemaDeReporteria.AplicacionWeb\\obj\\",
+      "outputPath": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.AplicacionWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\u\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -799,11 +799,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\SistemaDeReporteria\\SistemaDeReporteria.LogicaDeNegocio\\SistemaDeReporteria.LogicaDeNegocio.csproj": {
-              "projectPath": "E:\\SistemaDeReporteria\\SistemaDeReporteria.LogicaDeNegocio\\SistemaDeReporteria.LogicaDeNegocio.csproj"
+            "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.LogicaDeNegocio\\SistemaDeReporteria.LogicaDeNegocio.csproj": {
+              "projectPath": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.LogicaDeNegocio\\SistemaDeReporteria.LogicaDeNegocio.csproj"
             },
-            "E:\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj": {
-              "projectPath": "E:\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj"
+            "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj": {
+              "projectPath": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj"
             }
           }
         }

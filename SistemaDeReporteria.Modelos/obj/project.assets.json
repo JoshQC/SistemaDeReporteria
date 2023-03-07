@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj",
+      "projectUniqueName": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj",
       "projectName": "SistemaDeReporteria.Modelos",
-      "projectPath": "E:\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj",
+      "projectPath": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj",
       "packagesPath": "C:\\Users\\u\\.nuget\\packages\\",
-      "outputPath": "E:\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\obj\\",
+      "outputPath": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\u\\AppData\\Roaming\\NuGet\\NuGet.Config",
