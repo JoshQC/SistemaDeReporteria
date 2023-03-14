@@ -1,4 +1,7 @@
-﻿@{
+﻿@model Chart
+@using Newtonsoft.Json
+
+@{
     ViewData["Title"] = "Reporte";
 }
 
@@ -6,7 +9,7 @@
     <h1 class="titulo-pagina">@ViewData["Title"]</h1>
 
     <div class="graphic-reporte">
-        <h2>Titulo grafico</h2>
+        <h2>@Model.Titulo</h2>
         <canvas id="graphic" ></canvas>
     </div>
     <button class="btn" id="btn_descargar" type="button">Descargar</button>
@@ -40,9 +43,7 @@
 
 @section Scripts
 {
-    <script type="text/javascript">
-        const canvas = document.getElementById('graphic');
-        
+    <script type="text/javascript">     
         const handleOnClick = () => {
             const btnDescargar = document.getElementById('btn_descargar');
             btnDescargar.addEventListener('click', () => {
@@ -53,6 +54,7 @@
             })
         }
 
+        crearChart('@Model.Id', '@Model.Tipo',  @Html.Raw(JsonConvert.SerializeObject(Model.NombreColumnas)), '@Model.Titulo', @Html.Raw(JsonConvert.SerializeObject(Model.Datos)));
         handleOnClick();
     </script>
 }

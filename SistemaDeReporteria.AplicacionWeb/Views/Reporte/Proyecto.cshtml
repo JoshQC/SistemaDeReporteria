@@ -14,10 +14,10 @@
                 foreach (System.Reflection.PropertyInfo property in tipo.GetProperties())
                 {
                     string id = "ck_" + property.Name.ToLower().Replace('_','-');
-                    <div class="contenedor-check-variable">
-                        <input id=@id type="checkbox" name=@property.Name/>
-                        <label class="lb-variable" for=@property.Name>@property.Name.Replace('_',' ')</label>                               
-                    </div>
+                        <div class="contenedor-check-variable">
+                            <input id=@id type="checkbox" name=@property.Name/>
+                            <label class="lb-variable" for=@property.Name>@property.Name.Replace('_',' ')</label>                               
+                        </div>
                 }
             }
         </fieldset>
@@ -28,10 +28,10 @@
                 foreach (System.Reflection.PropertyInfo property in tipo.GetProperties())
                 {
                     string id = "contenedor_" + property.Name.ToLower().Replace('_','-');
-                    <div id=@id hidden>
-                        <label class="lb-variable" for=@property.Name>@property.Name.Replace('_',' ')</label> <br/>
-                        @Html.Editor(property.Name)
-                    </div>   
+                        <div id=@id hidden>
+                            <label class="lb-variable" for=@property.Name>@property.Name.Replace('_',' ')</label> <br/>
+                            @Html.Editor(property.Name)
+                        </div>   
                 }
             }
             </div>
@@ -54,6 +54,7 @@
 
        validarCantidadCheckboxActivos();
        agregarEventoToggle(variables); 
+       validarCamposFormulario();
     </script>
 }
    

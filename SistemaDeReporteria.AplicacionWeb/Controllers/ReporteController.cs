@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SistemaDeReporteria.AplicacionWeb.Models;
 
 namespace SistemaDeReporteria.AplicacionWeb.Controllers
 {
@@ -33,7 +34,10 @@ namespace SistemaDeReporteria.AplicacionWeb.Controllers
 
         public IActionResult Reporte()
         {
-            return View();
+            List<string> columnas = new List<string>() {"columna1", "columna2", "columna3" };
+            List<int> datos = new List<int>() { 1, 2, 3 };
+
+            return View( new Chart("graphic", "bar", columnas,"Columnas", datos));
         }
 
     }

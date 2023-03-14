@@ -4,38 +4,67 @@
         const contenedor = document.getElementById(`contenedor_${variable}`);
         ck.addEventListener('change', () => {
             contenedor.classList.toggle("show");
+            const input = contenedor.querySelector('input');
+            input.required ? input.required = false : input.required = true;
         })
     });
 }
 
 const validarCantidadCheckboxActivos = () => {
-    let checkboxes = document.querySelectorAll('.contenedor-check-variable input[type="checkbox"]');
+    const checkboxes = document.querySelectorAll('.contenedor-check-variable input[type="checkbox"]');
     let cantidadCheckboxesActivos = 0;
     const MAX_CANTIDAD_CHECKBOX = 4;
 
-    for (var i = 0; i < checkboxes.length; i++) {
-        checkboxes[i].addEventListener('click', function () {
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener('click', function () {
             if (this.checked) {
                 cantidadCheckboxesActivos++;
 
                 if (cantidadCheckboxesActivos == MAX_CANTIDAD_CHECKBOX) {
-                    for (var j = 0; j < checkboxes.length; j++) {
-                        if (!checkboxes[j].checked) {
-                            checkboxes[j].disabled = true;
+                    checkboxes.forEach((checkbox) => {
+                        if (!checkbox.checked) {
+                            checkbox.disabled = true;
                         }
-                    }
+                    });
                 }
             } else {
                 cantidadCheckboxesActivos--;
 
                 if (cantidadCheckboxesActivos == MAX_CANTIDAD_CHECKBOX - 1) {
-                    for (var j = 0; j < checkboxes.length; j++) {
-                        if (!checkboxes[j].checked) {
-                            checkboxes[j].disabled = false;
+                    checkboxes.forEach((checkbox) => {
+                        if (!checkbox.checked) {
+                            checkbox.disabled = false;
                         }
-                    }
+                    });
                 }
             }
         });
+    });
+}
+
+const validarCamposFormulario = () => {
+    const inputs = document.querySelectorAll('form div div input');
+    inputs.forEach((input) => {
+        try {
+            const patronYMensaje = obtenerPatronYMensajeError(input.name);
+            [patron, mensaje] = patronYMensaje;
+            input.pattern = patron;
+            input.title = mensaje;
+        } catch (err) {
+        }
+    });
+}
+
+const obtenerPatronYMensajeError = (nombreInput) => {
+    const lista = [];
+
+    switch (nombreInput) {
+        case 'Grado_Academico':
+            lista.push('a-zA-Z');
+            lista.push('Ingrese solamente caracteres');
+            break;
+        default: lista = null;
     }
+
+    return lista;
 }

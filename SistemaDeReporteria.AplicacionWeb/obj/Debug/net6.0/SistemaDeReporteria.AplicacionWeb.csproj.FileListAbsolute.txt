@@ -98,3 +98,4 @@ E:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\obj\De
 E:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\obj\Debug\net6.0\SistemaDeReporteria.AplicacionWeb.pdb
 E:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\obj\Debug\net6.0\SistemaDeReporteria.AplicacionWeb.genruntimeconfig.cache
 E:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\obj\Debug\net6.0\ref\SistemaDeReporteria.AplicacionWeb.dll
+E:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Newtonsoft.Json.dll
