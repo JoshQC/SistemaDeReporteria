@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\SistemaDeReporteria.AplicacionWeb.props" />
+</Project>

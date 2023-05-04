@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.LogicaDeNegocio\\SistemaDeReporteria.LogicaDeNegocio.csproj": {}
+    "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.LogicaDeNegocio\\SistemaDeReporteria.LogicaDeNegocio.csproj": {}
   },
   "projects": {
-    "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Datos\\SistemaDeReporteria.Datos.csproj": {
+    "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Datos\\SistemaDeReporteria.Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Datos\\SistemaDeReporteria.Datos.csproj",
+        "projectUniqueName": "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Datos\\SistemaDeReporteria.Datos.csproj",
         "projectName": "SistemaDeReporteria.Datos",
-        "projectPath": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Datos\\SistemaDeReporteria.Datos.csproj",
-        "packagesPath": "C:\\Users\\u\\.nuget\\packages\\",
-        "outputPath": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Datos\\obj\\",
+        "projectPath": "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Datos\\SistemaDeReporteria.Datos.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Datos\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\u\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj": {
-                "projectPath": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj"
+              "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj": {
+                "projectPath": "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj"
               }
             }
           }
@@ -59,7 +63,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -68,21 +73,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.LogicaDeNegocio\\SistemaDeReporteria.LogicaDeNegocio.csproj": {
+    "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.LogicaDeNegocio\\SistemaDeReporteria.LogicaDeNegocio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.LogicaDeNegocio\\SistemaDeReporteria.LogicaDeNegocio.csproj",
+        "projectUniqueName": "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.LogicaDeNegocio\\SistemaDeReporteria.LogicaDeNegocio.csproj",
         "projectName": "SistemaDeReporteria.LogicaDeNegocio",
-        "projectPath": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.LogicaDeNegocio\\SistemaDeReporteria.LogicaDeNegocio.csproj",
-        "packagesPath": "C:\\Users\\u\\.nuget\\packages\\",
-        "outputPath": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.LogicaDeNegocio\\obj\\",
+        "projectPath": "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.LogicaDeNegocio\\SistemaDeReporteria.LogicaDeNegocio.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.LogicaDeNegocio\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\u\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,11 +105,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Datos\\SistemaDeReporteria.Datos.csproj": {
-                "projectPath": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Datos\\SistemaDeReporteria.Datos.csproj"
+              "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Datos\\SistemaDeReporteria.Datos.csproj": {
+                "projectPath": "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Datos\\SistemaDeReporteria.Datos.csproj"
               },
-              "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj": {
-                "projectPath": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj"
+              "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj": {
+                "projectPath": "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj"
               }
             }
           }
@@ -120,7 +129,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -129,21 +139,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj": {
+    "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj",
+        "projectUniqueName": "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj",
         "projectName": "SistemaDeReporteria.Modelos",
-        "projectPath": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj",
-        "packagesPath": "C:\\Users\\u\\.nuget\\packages\\",
-        "outputPath": "E:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\obj\\",
+        "projectPath": "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\SistemaDeReporteria.Modelos.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.Modelos\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\u\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -174,7 +188,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -183,7 +198,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

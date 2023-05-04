@@ -48,13 +48,13 @@
 @section Scripts
 {
     <script type="text/javascript">
-        const variables = ["codigo", "titulo", "estado", "tipo", "area-cientifica", "objetivo-socioeconomico", "eje-de-planes", 
-        "unidad-de-investigacion", "fecha-de-inicio", "fecha-de-finalizacion", "canton", "region", "objetivo-de-desarrollo-sostenible", 
-        "grado-academico", "edad", "sexo"]
+        const variables = ["estado", "tipo", "area-cientifica", "objetivo-socioeconomico", "eje-de-planes",
+            "unidad-de-investigacion", "fecha-inicio-estimada", "fecha-inicio-real", "fecha-finalizacion-estimada", 
+            "fecha-finalizacion-real", "canton", "region", "objetivo-de-desarrollo-sostenible"]
 
        validarCantidadCheckboxActivos();
-       agregarEventoToggle(variables); 
-       validarCamposFormulario();
+       agregarEventoToggle(variables);
+       validarFormulario();
     </script>
 }
    

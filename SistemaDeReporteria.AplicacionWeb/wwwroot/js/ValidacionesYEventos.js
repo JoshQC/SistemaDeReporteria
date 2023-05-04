@@ -1,11 +1,23 @@
 ﻿const agregarEventoToggle = (variables) => {
     variables.forEach((variable) => {
         const ck = document.getElementById(`ck_${variable}`);
-        const contenedor = document.getElementById(`contenedor_${variable}`);
+        
         ck.addEventListener('change', () => {
-            contenedor.classList.toggle("show");
-            const input = contenedor.querySelector('input');
-            input.required ? input.required = false : input.required = true;
+            if (ck.id != "ck_edad") {
+                const contenedor = document.getElementById(`contenedor_${variable}`);
+                contenedor.classList.toggle("show");
+                const input = contenedor.querySelector('input');
+                input.required ? input.required = false : input.required = true;
+            } else {
+                const edadDesdeContenedor = document.getElementById("contenedor_edad-minima");
+                const edadHastaContenedor = document.getElementById("contenedor_edad-maxima");
+                const edadDesde = document.getElementById('Edad_Minima');
+                const edadHasta = document.getElementById('Edad_Maxima');
+                edadDesdeContenedor.classList.toggle("show");
+                edadHastaContenedor.classList.toggle("show");
+                edadDesde.required ? edadDesde.required = false : edadDesde.required = true;
+                edadHasta.required ? edadHasta.required = false : edadHasta.required = true;
+            }
         })
     });
 }
@@ -42,29 +54,76 @@ const validarCantidadCheckboxActivos = () => {
     });
 }
 
-const validarCamposFormulario = () => {
-    const inputs = document.querySelectorAll('form div div input');
-    inputs.forEach((input) => {
-        try {
-            const patronYMensaje = obtenerPatronYMensajeError(input.name);
-            [patron, mensaje] = patronYMensaje;
-            input.pattern = patron;
-            input.title = mensaje;
-        } catch (err) {
-        }
-    });
-}
-
 const obtenerPatronYMensajeError = (nombreInput) => {
-    const lista = [];
+    let lista = [];
 
     switch (nombreInput) {
         case 'Grado_Academico':
-            lista.push('a-zA-Z');
-            lista.push('Ingrese solamente caracteres');
+        case 'Estado':
+        case 'Tipo':
+        case 'Area_Cientifica':
+        case 'Objetivo_Socioeconomico':
+        case 'Eje_De_Planes':
+        case 'Unidad_De_Investigacion':
+        case 'Canton':
+        case 'Region':
+        case 'Objetivo_De_Desarrollo_Sostenible':
+        case 'Nombre_Del_Investigador':
+        case 'Sexo':
+            nombreInput = nombreInput.replace('_', ' ');
+            lista.push(/[a-zA-Z]/);
+            lista.push(`En ${nombreInput} ingrese solamente caracteres`);
             break;
-        default: lista = null;
+        case 'Fecha_Inicio_Estimada':
+        case 'Fecha_Inicio_Real':
+        case 'Fecha_Finalizacion_Estimada':
+        case 'Fecha_Finalizacion_Real':
+        case 'Fecha_De_Inicio':
+            nombreInput = nombreInput.replace('_', ' ');
+            lista.push(/^\d{2}-\d{2}-\d{4}$|^\d{4}$/);
+            lista.push(`En ${nombreInput} debe seguir un formato de fecha dia-mes-año o solamente año`);
+            break;
+        case 'Edad_Desde':
+        case 'Edad_Hasta':
+            nombreInput = nombreInput.replace('_', ' ');
+            lista.push(/^[0-9]+$/);
+            lista.push(`En ${nombreInput} ingrese solamente numeros`);
+            break;
+        default: throw new Error(`El nombre de la entrada de formulario '${nombreInput}' no es válido`);
     }
 
     return lista;
+}
+
+const validarFormulario = () => {
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const inputs = form.querySelectorAll('input[required]');
+        const errors = [];
+        
+        inputs.forEach((input) => {
+           
+           const patronYMensaje = obtenerPatronYMensajeError(input.name);
+            
+                [patron, mensaje] = patronYMensaje;
+                const contenido = input.value.trim();
+
+                if (contenido === '') {
+                    errors.push(`El campo ${input.name} es obligatorio.`);
+                }
+
+                if (!patron.test(contenido)) {
+                    errors.push(mensaje);
+                }
+        });
+
+        if (errors.length > 0) {
+            alert(errors.join('\n'));
+        } else {
+            form.submit();
+        }
+    });
 }

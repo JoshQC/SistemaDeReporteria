@@ -4,8 +4,9 @@
     {
         public string Estado { get; set; }
         public string Nombre_Del_Investigador { get; set; }
-        public DateTime Fecha_De_Inicio { get; set; }
+        public string Fecha_De_Inicio { get; set; }
         public string Area_Cientifica { get; set; }
-        public int Edad { get; set; }
+        public int Edad_Minima { get; set; }
+        public int Edad_Maxima { get; set; }
     }
 }

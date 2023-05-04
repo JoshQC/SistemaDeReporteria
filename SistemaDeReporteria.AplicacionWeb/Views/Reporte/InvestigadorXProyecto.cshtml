@@ -10,14 +10,35 @@
             @{
                 VariablesInvestigadorXProyecto varInvestigadorXProyecto = new();
                 Type tipo = varInvestigadorXProyecto.GetType();
+                int contadorEdad = 0;
 
                 foreach (System.Reflection.PropertyInfo property in tipo.GetProperties())
                 {
-                    string id = "ck_" + property.Name.ToLower().Replace('_','-');
-                    <div class="contenedor-check-variable">
-                        <input id=@id type="checkbox" name=@property.Name/>
-                        <label class="lb-variable" for=@property.Name>@property.Name.Replace('_',' ')</label>                               
-                    </div>
+                    string id = "ck_";
+
+                    if (property.Name != "Edad_Minima" && property.Name != "Edad_Maxima")
+                    {
+                        id += property.Name.ToLower().Replace('_', '-');
+                        <div class="contenedor-check-variable">
+                            <input id=@id type="checkbox" name=@property.Name />
+                            <label class="lb-variable" for=@property.Name>@property.Name.Replace('_',' ')</label>
+                        </div>
+                    }
+                    else
+                    {
+                        if (++contadorEdad == 1)
+                        {
+                            id += "edad";
+                            <div class="contenedor-check-variable">
+                                <input id=@id type="checkbox" name="Edad" />
+                                <label class="lb-variable" for="Edad">Edad</label>
+                            </div>
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
                 }
             }
         </fieldset>
@@ -27,11 +48,12 @@
                 @{
                 foreach (System.Reflection.PropertyInfo property in tipo.GetProperties())
                 {
-                    string id = "contenedor_" + property.Name.ToLower().Replace('_','-');
+                    string id = "contenedor_" + property.Name.ToLower().Replace('_', '-');
+
                     <div id=@id hidden>
-                        <label class="lb-variable" for=@property.Name>@property.Name.Replace('_',' ')</label> <br/>
+                        <label class="lb-variable" for=@property.Name>@property.Name.Replace('_',' ')</label> <br />
                         @Html.Editor(property.Name)
-                    </div>   
+                    </div>
                 }
             }
             </div>
@@ -52,6 +74,6 @@
         
         validarCantidadCheckboxActivos();
         agregarEventoToggle(variables);
-        validarCamposFormulario();
+        validarFormulario();
     </script>
 }
