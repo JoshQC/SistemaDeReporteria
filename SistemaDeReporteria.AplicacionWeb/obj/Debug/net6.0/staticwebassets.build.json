@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pch4HHLyZcBG4b9DQLTb42CZ5RUSQS3yHDQMh26O1ck=",
+  "Hash": "kwWNJk7Yg2bkxfEjLDMoLwlqHTbZitwSK4ObYzjRgGU=",
   "Source": "SistemaDeReporteria.AplicacionWeb",
   "BasePath": "_content/SistemaDeReporteria.AplicacionWeb",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.AplicacionWeb\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SistemaDeReporteria.AplicacionWeb.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.AplicacionWeb\\wwwroot\\css\\modal.css",
+      "SourceId": "SistemaDeReporteria.AplicacionWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.AplicacionWeb\\wwwroot\\",
+      "BasePath": "_content/SistemaDeReporteria.AplicacionWeb",
+      "RelativePath": "css/modal.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\modal.css"
     },
     {
       "Identity": "D:\\Proyectos Progra\\SistemaDeReporteria\\SistemaDeReporteria.AplicacionWeb\\wwwroot\\css\\site.css",

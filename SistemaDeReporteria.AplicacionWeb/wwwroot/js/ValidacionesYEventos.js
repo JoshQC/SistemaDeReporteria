@@ -102,7 +102,7 @@ const validarFormulario = () => {
         event.preventDefault();
 
         const inputs = form.querySelectorAll('input[required]');
-        const errors = [];
+        const errores = [];
         
         inputs.forEach((input) => {
            
@@ -112,18 +112,41 @@ const validarFormulario = () => {
                 const contenido = input.value.trim();
 
                 if (contenido === '') {
-                    errors.push(`El campo ${input.name} es obligatorio.`);
+                    errores.push(`El campo ${input.name} es obligatorio.`);
                 }
 
                 if (!patron.test(contenido)) {
-                    errors.push(mensaje);
+                    errores.push(mensaje);
                 }
         });
 
-        if (errors.length > 0) {
-            alert(errors.join('\n'));
+        if (errores.length > 0) {
+            mostrarVentanaModal('Error', errores);
         } else {
             form.submit();
         }
     });
+}
+
+const mostrarVentanaModal = (nombreTitulo, errores) => {
+    const ventanaModal = document.getElementById('ventanaModal');
+    console.log(ventanaModal);
+    const titulo = ventanaModal.querySelector('.modal-titulo');
+    const contenido = ventanaModal.querySelector('.modal-cuerpo-contenido');
+    titulo.textContent = nombreTitulo;
+    contenido.textContent = errores.join('\n');
+    ventanaModal.style.display = 'block';
+}
+
+const ocultarVentanaModal = () => {
+    const ventanaModal = document.getElementById('ventanaModal');
+    const botonCerrar = ventanaModal.querySelector('.modal-boton');
+    const botonDeCierreX = ventanaModal.querySelector('.modal-cerrar');
+
+    const cerrarVentana = () => {
+        ventanaModal.style.display = 'none';
+    }
+
+    botonDeCierreX.addEventListener('click', cerrarVentana )
+    botonCerrar.addEventListener('click', cerrarVentana );
 }
