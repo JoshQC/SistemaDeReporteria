@@ -22,7 +22,7 @@
             }
         </fieldset>
     
-        <form>
+        <form asp-controller="Reporte" asp-action="ObtenerProyectos" method="get">
             <div>
                 @{
                 foreach (System.Reflection.PropertyInfo property in tipo.GetProperties())

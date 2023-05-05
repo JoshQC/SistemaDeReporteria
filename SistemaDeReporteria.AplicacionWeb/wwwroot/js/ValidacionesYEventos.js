@@ -83,8 +83,8 @@ const obtenerPatronYMensajeError = (nombreInput) => {
             lista.push(/^\d{2}-\d{2}-\d{4}$|^\d{4}$/);
             lista.push(`En ${nombreInput} debe seguir un formato de fecha dia-mes-año o solamente año`);
             break;
-        case 'Edad_Desde':
-        case 'Edad_Hasta':
+        case 'Edad_Minima':
+        case 'Edad_Maxima':
             nombreInput = nombreInput.replace('_', ' ');
             lista.push(/^[0-9]+$/);
             lista.push(`En ${nombreInput} ingrese solamente numeros`);
@@ -141,12 +141,10 @@ const mostrarVentanaModal = (nombreTitulo, errores) => {
 const ocultarVentanaModal = () => {
     const ventanaModal = document.getElementById('ventanaModal');
     const botonCerrar = ventanaModal.querySelector('.modal-boton');
-    const botonDeCierreX = ventanaModal.querySelector('.modal-cerrar');
 
     const cerrarVentana = () => {
         ventanaModal.style.display = 'none';
     }
 
-    botonDeCierreX.addEventListener('click', cerrarVentana )
     botonCerrar.addEventListener('click', cerrarVentana );
 }
