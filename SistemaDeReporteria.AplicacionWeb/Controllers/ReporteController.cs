@@ -1,16 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SistemaDeReporteria.AplicacionWeb.Models;
+using SistemaDeReporteria.Modelos;
 using System.Diagnostics;
+using SistemaDeReporteria.LogicaDeNegocio;
+using System.Text;
 
 namespace SistemaDeReporteria.AplicacionWeb.Controllers
 {
     public class ReporteController : Controller
     {
         private readonly ILogger<ReporteController> _logger;
+        private ReporteManager _reporteManager;
 
         public ReporteController(ILogger<ReporteController> logger)
         {
             _logger = logger;
+            _reporteManager = new ReporteManager();
         }
 
         public IActionResult Index()
@@ -26,7 +31,9 @@ namespace SistemaDeReporteria.AplicacionWeb.Controllers
         [HttpGet]
         public IActionResult ObtenerProyectos(VariablesProyecto variablesProyecto)
         {
-            return View("Index");
+            var viewModel = _reporteManager.obtenerViewModelDeProyectosPorVariablesDeProyecto(variablesProyecto);
+
+            return View("Reporte", viewModel);
         }
 
         public IActionResult Investigador()
@@ -37,10 +44,9 @@ namespace SistemaDeReporteria.AplicacionWeb.Controllers
         [HttpGet]
         public IActionResult ObtenerInvestigadores(VariablesInvestigador variablesInvestigador)
         {
-            //string rutaArchivo = Path.Combine(Directory.GetCurrentDirectory(), "archivo.txt");
-            //System.IO.File.WriteAllText(rutaArchivo, variablesInvestigador.ToString());
+            var viewModel = _reporteManager.obtenerViewModelDeInvestigadoresPorVariablesDeInvestigador(variablesInvestigador);
 
-            return View("Index");
+            return View("Reporte", viewModel);
         }
 
         public IActionResult InvestigadorXProyecto()
@@ -51,15 +57,9 @@ namespace SistemaDeReporteria.AplicacionWeb.Controllers
         [HttpGet]
         public IActionResult ObtenerProyectosXInvestigador(VariablesInvestigadorXProyecto variablesInvestigadorXProyecto)
         {
-            return View("Index");
-        }
+            var viewModel = _reporteManager.obtenerViewModelDeProyectosPorVariablesDeInvestigadorXProyecto(variablesInvestigadorXProyecto);
 
-        public IActionResult Reporte()
-        {
-            List<string> columnas = new List<string>() {"columna1", "columna2", "columna3" };
-            List<int> datos = new List<int>() { 1, 2, 3 };
-
-            return View( new Chart("graphic", "bar", columnas,"Columnas", datos));
+            return View("Reporte", viewModel);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

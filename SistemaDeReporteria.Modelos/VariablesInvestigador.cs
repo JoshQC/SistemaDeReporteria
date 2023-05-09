@@ -1,4 +1,4 @@
-﻿namespace SistemaDeReporteria.AplicacionWeb.Models
+﻿namespace SistemaDeReporteria.Modelos
 {
     public class VariablesInvestigador
     {

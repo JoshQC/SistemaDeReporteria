@@ -80,8 +80,8 @@ const obtenerPatronYMensajeError = (nombreInput) => {
         case 'Fecha_Finalizacion_Real':
         case 'Fecha_De_Inicio':
             nombreInput = nombreInput.replace('_', ' ');
-            lista.push(/^\d{2}-\d{2}-\d{4}$|^\d{4}$/);
-            lista.push(`En ${nombreInput} debe seguir un formato de fecha dia-mes-año o solamente año`);
+            lista.push(/^\d{4}-\d{2}-\d{2}$|^\d{4}$/);
+            lista.push(`En ${nombreInput} debe seguir un formato de fecha año-mes-dia o solamente año`);
             break;
         case 'Edad_Minima':
         case 'Edad_Maxima':

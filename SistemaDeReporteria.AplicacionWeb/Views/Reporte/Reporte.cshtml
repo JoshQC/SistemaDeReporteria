@@ -1,5 +1,6 @@
-﻿@model Chart
-@using Newtonsoft.Json
+﻿@using Newtonsoft.Json
+@using SistemaDeReporteria.Modelos;
+@model ReporteViewModel
 
 @{
     ViewData["Title"] = "Reporte";
@@ -9,7 +10,7 @@
     <h1 class="titulo-pagina">@ViewData["Title"]</h1>
 
     <div class="graphic-reporte">
-        <h2>@Model.Titulo</h2>
+        <h2>@Model.Chart.Titulo</h2>
         <canvas id="graphic" ></canvas>
     </div>
     <button class="btn" id="btn_descargar" type="button">Descargar</button>
@@ -18,24 +19,49 @@
         <table>
         <thead>
             <tr>
-                <th>header1</th>
-                <th>header2</th>
-                <th>header3</th>
-                <th>header4</th>
-                <th>header5</th>
-                <th>header6</th>
+                @foreach (string nombreColumna in Model.ColumnasTabla)
+                {
+                    <th>@nombreColumna</th>
+                }
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>item1</td>
-                <td>item2</td>
-                <td>item3</td>
-                <td>item4</td>
-                <td>item5</td>
-                <td>item6</td>
-            </tr>
-        </tbody>
+            @if (Model.Proyectos != null)
+            {
+                @foreach (var proyecto in Model.Proyectos)
+                {
+                    <tr>
+                        <td>@proyecto.Codigo</td>
+                        <td>@proyecto.Titulo</td>
+                        <td>@proyecto.Estado</td>
+                        <td>@proyecto.Tipo</td>
+                        <td>@proyecto.AreaConocimiento</td>
+                        <td>@proyecto.ObjetivoSocioEconomico</td>
+                        <td>@proyecto.EjeDePlanes</td>
+                        <td>@proyecto.UnidadInvestigacion</td>
+                        <td>@proyecto.FechaInicioEstimada</td>
+                        <td>@proyecto.FechaInicioReal</td>
+                        <td>@proyecto.FechaFinalizacionEstimada</td>
+                        <td>@proyecto.FechaFinalizacionReal</td>
+                    </tr>
+                }
+            }else if (Model.Investigadores != null)
+            {
+                @foreach (var investigador in Model.Investigadores)
+                {
+                    <tr>
+                        <td>@investigador.PrimerApellido</td>
+                        <td>@investigador.SegundoApellido</td>
+                        <td>@investigador.Nombre</td>
+                        <td>@investigador.Identificacion</td>
+                        <td>@investigador.CorreoPrincipal</td>
+                        <td>@investigador.GradoAcademico</td>
+                        <td>@investigador.Edad</td>
+                        <td>@investigador.Sexo</td>
+                    </tr>
+                }
+            }
+            </tbody>
         <tfoot></tfoot>
     </table>
     </div>
@@ -54,7 +80,7 @@
             })
         }
 
-        crearChart('@Model.Id', '@Model.Tipo',  @Html.Raw(JsonConvert.SerializeObject(Model.NombreColumnas)), '@Model.Titulo', @Html.Raw(JsonConvert.SerializeObject(Model.Datos)));
+        crearChart('@Model.Chart.Id', '@Model.Chart.Tipo', @Html.Raw(JsonConvert.SerializeObject(Model.Chart.NombreColumnas)), '@Model.Chart.Titulo', @Html.Raw(JsonConvert.SerializeObject(Model.Chart.Datos)));
         handleOnClick();
     </script>
 }
