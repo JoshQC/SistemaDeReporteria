@@ -3,68 +3,72 @@
 @model ReporteViewModel
 
 @{
-    ViewData["Title"] = "Reporte";
+    ViewData["Title"] = Model.TituloVista;
 }
 
 <div class="container-reporte">
     <h1 class="titulo-pagina">@ViewData["Title"]</h1>
+
+    <div class="table-reporte">
+        <table>
+            <thead>
+                <tr>
+                    @if (Model.ColumnasTabla != null)
+                    {
+                        @foreach (string nombreColumna in Model.ColumnasTabla)
+                        {
+                            <th>@nombreColumna</th>
+                        }
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Proyectos != null)
+                {
+                    @foreach (var proyecto in Model.Proyectos)
+                    {
+                        <tr>
+                            <td>@proyecto.Codigo</td>
+                            <td>@proyecto.Titulo</td>
+                            <td>@proyecto.Estado</td>
+                            <td>@proyecto.Tipo</td>
+                            <td>@proyecto.AreaConocimiento</td>
+                            <td>@proyecto.ObjetivoSocioEconomico</td>
+                            <td>@proyecto.EjeDePlanes</td>
+                            <td>@proyecto.UnidadInvestigacion</td>
+                            <td>@proyecto.FechaInicioEstimada</td>
+                            <td>@proyecto.FechaInicioReal</td>
+                            <td>@proyecto.FechaFinalizacionEstimada</td>
+                            <td>@proyecto.FechaFinalizacionReal</td>
+                        </tr>
+                    }
+                }
+                else if (Model.Investigadores != null)
+                {
+                    @foreach (var investigador in Model.Investigadores)
+                    {
+                        <tr>
+                            <td>@investigador.PrimerApellido</td>
+                            <td>@investigador.SegundoApellido</td>
+                            <td>@investigador.Nombre</td>
+                            <td>@investigador.Identificacion</td>
+                            <td>@investigador.CorreoPrincipal</td>
+                            <td>@investigador.GradoAcademico</td>
+                            <td>@investigador.Edad</td>
+                            <td>@(investigador.Sexo == 1 ? "Masculino" : "Femenina")</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+    </div>
 
     <div class="graphic-reporte">
         <h2>@Model.Chart.Titulo</h2>
         <canvas id="graphic" ></canvas>
     </div>
     <button class="btn" id="btn_descargar" type="button">Descargar</button>
-
-    <div class="table-reporte">
-        <table>
-        <thead>
-            <tr>
-                @foreach (string nombreColumna in Model.ColumnasTabla)
-                {
-                    <th>@nombreColumna</th>
-                }
-            </tr>
-        </thead>
-        <tbody>
-            @if (Model.Proyectos != null)
-            {
-                @foreach (var proyecto in Model.Proyectos)
-                {
-                    <tr>
-                        <td>@proyecto.Codigo</td>
-                        <td>@proyecto.Titulo</td>
-                        <td>@proyecto.Estado</td>
-                        <td>@proyecto.Tipo</td>
-                        <td>@proyecto.AreaConocimiento</td>
-                        <td>@proyecto.ObjetivoSocioEconomico</td>
-                        <td>@proyecto.EjeDePlanes</td>
-                        <td>@proyecto.UnidadInvestigacion</td>
-                        <td>@proyecto.FechaInicioEstimada</td>
-                        <td>@proyecto.FechaInicioReal</td>
-                        <td>@proyecto.FechaFinalizacionEstimada</td>
-                        <td>@proyecto.FechaFinalizacionReal</td>
-                    </tr>
-                }
-            }else if (Model.Investigadores != null)
-            {
-                @foreach (var investigador in Model.Investigadores)
-                {
-                    <tr>
-                        <td>@investigador.PrimerApellido</td>
-                        <td>@investigador.SegundoApellido</td>
-                        <td>@investigador.Nombre</td>
-                        <td>@investigador.Identificacion</td>
-                        <td>@investigador.CorreoPrincipal</td>
-                        <td>@investigador.GradoAcademico</td>
-                        <td>@investigador.Edad</td>
-                        <td>@investigador.Sexo</td>
-                    </tr>
-                }
-            }
-            </tbody>
-        <tfoot></tfoot>
-    </table>
-    </div>
 </div>
 
 @section Scripts

@@ -12,5 +12,6 @@ namespace SistemaDeReporteria.Modelos
         public List<Investigador>? Investigadores { get; set; }
         public List<string> ColumnasTabla { get; set; }
         public Chart Chart { get; set; }
+        public string TituloVista { get; set; }
     }
 }

@@ -1,4 +1,6 @@
-﻿@using SistemaDeReporteria.Modelos;
+﻿@model InvestigadorViewModel;
+@using SistemaDeReporteria.Modelos;
+@using Newtonsoft.Json;
 @{
     ViewData["Title"] = "Investigadores";
 }
@@ -9,8 +11,7 @@
         <fieldset class="tarjeta-checkbox-area">
             <legend>Listar investigadores segun:</legend>
             @{
-                VariablesInvestigador varInvestigador = new();
-                Type tipo = varInvestigador.GetType();
+                Type tipo = Model.VariablesInvestigador.GetType();
                 int contadorEdad = 0;
 
                 foreach (System.Reflection.PropertyInfo property in tipo.GetProperties())
@@ -46,27 +47,39 @@
     
         <form asp-controller="Reporte" asp-action="ObtenerInvestigadores" method="get">
             <div>
-                @{
-                    foreach (System.Reflection.PropertyInfo property in tipo.GetProperties())
-                    {
-                        string id = "contenedor_" + property.Name.ToLower().Replace('_', '-');
+                <div id="contenedor_grado-academico" hidden>
+                    <label class="lb-variable" for="Grado_Academico">Grado Academico</label><br />
+                    <input asp-for="VariablesInvestigador.Grado_Academico" value="" />
+                </div>
 
-                        <div id=@id hidden>
-                            <label class="lb-variable" for=@property.Name>@property.Name.Replace('_',' ')</label> <br />
-                            @Html.Editor(property.Name)
-                        </div>
-                }
-            }
+                <div id="contenedor_edad-minima" hidden>
+                    <label class="lb-variable" for="Edad_Minima">Edad Minima</label><br />
+                    <input type="number" asp-for="VariablesInvestigador.Edad_Minima" value="" min="1" max="100" />
+                </div>
+
+                <div id="contenedor_edad-maxima" hidden>
+                    <label class="lb-variable" for="Edad_Maxima">Edad Maxima</label><br />
+                    <input type="number" asp-for="VariablesInvestigador.Edad_Maxima" value="" min="1" max="100" />
+                </div>
+
+                <div id="contenedor_sexo" hidden>
+                    <label class="lb-variable" for="Sexo">Sexo</label><br />
+                    <select asp-for="VariablesInvestigador.Sexo" asp-items="@(new SelectList(Model.Sexos))">
+                        <option selected value=""></option>
+                    </select>
+                </div>
             </div>
         
             <div class="form-contenedor-botones">
-                <button class="btn" type="submit">Enviar</button>
+                <button disabled id="btnSubmit" class="btn" type="submit">Enviar</button>
                 <button class="btn" type="reset">Limpiar</button>
             </div>
         </form>
     </div>
 </section>
 
+<script src="~/js/ValidacionesYEventos.js" asp-append-version="true"></script>
+@await Html.PartialAsync("_VentanaModal")
 
 @section Scripts
 {
@@ -75,10 +88,14 @@
 
         validarCantidadCheckboxActivos();
         agregarEventoToggle(variables);
-        validarFormulario();
+        cambiarEstadoBtnSubmit();
     </script>
 }
 
+@if (Model.Errores.Count > 0)
+{
+    <script>mostrarVentanaModal('Error', @Html.Raw(JsonConvert.SerializeObject(Model.Errores)))</script>
+}
 
 
     

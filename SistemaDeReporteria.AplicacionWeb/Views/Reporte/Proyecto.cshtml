@@ -1,4 +1,6 @@
-﻿@using SistemaDeReporteria.Modelos;
+﻿@model ProyectoViewModel;
+@using Newtonsoft.Json;
+@using SistemaDeReporteria.Modelos;
 @{
     ViewData["Title"] = "Proyectos de Investigacion";
 }
@@ -9,8 +11,7 @@
         <fieldset class="tarjeta-checkbox-area">
             <legend>Seleccione las variables del reporte</legend>
             @{
-                VariablesProyecto varProyecto = new();
-                Type tipo = varProyecto.GetType();
+                Type tipo = Model.VariablesProyecto.GetType();
 
                 foreach (System.Reflection.PropertyInfo property in tipo.GetProperties())
                 {
@@ -25,26 +26,89 @@
     
         <form asp-controller="Reporte" asp-action="ObtenerProyectos" method="get">
             <div>
-                @{
-                foreach (System.Reflection.PropertyInfo property in tipo.GetProperties())
-                {
-                    string id = "contenedor_" + property.Name.ToLower().Replace('_','-');
-                        <div id=@id hidden>
-                            <label class="lb-variable" for=@property.Name>@property.Name.Replace('_',' ')</label> <br/>
-                            @Html.Editor(property.Name)
-                        </div>   
-                }
-            }
+                <div id="contenedor_estado" hidden>
+                    <label class="lb-variable" for="Estado">Estado</label><br />
+                    <select  asp-for="VariablesProyecto.Estado" asp-items="@(new SelectList(Model.Estados))">
+                        <option selected value=""></option>
+                    </select>
+                </div>
+
+                <div id="contenedor_tipo" hidden>
+                    <label class="lb-variable" for="Tipo">Tipo</label><br />
+                    <select  asp-for="VariablesProyecto.Tipo" asp-items="@(new SelectList(Model.Tipos))">
+                        <option selected value=""></option>
+                    </select>
+                </div>
+
+                <div id="contenedor_region" hidden>
+                    <label class="lb-variable" for="Region">Region</label><br />
+                    <select  asp-for="VariablesProyecto.Region" asp-items="@(new SelectList(Model.Regiones))">
+                        <option selected value=""></option>
+                    </select>
+                </div>
+
+                <div id="contenedor_area-cientifica" hidden>
+                    <label class="lb-variable" for="Area_Cientifica">Area Cientifica</label><br />
+                    <input asp-for="VariablesProyecto.Area_Cientifica" value="" />
+                </div>
+
+                <div id="contenedor_objetivo-socioeconomico" hidden>
+                    <label class="lb-variable" for="Objetivo_Socioeconomico">Objetivo Socioeconómico</label><br />
+                    <input asp-for="VariablesProyecto.Objetivo_Socioeconomico" value="" />
+                </div>
+
+                <div id="contenedor_eje-de-planes" hidden>
+                    <label class="lb-variable" for="Eje_De_Planes">Eje de Planes</label><br />
+                    <input asp-for="VariablesProyecto.Eje_De_Planes" value="" />
+                </div>
+
+                <div id="contenedor_unidad-de-investigacion" hidden>
+                    <label class="lb-variable" for="Unidad_De_Investigacion">Unidad de Investigación</label><br />
+                    <input asp-for="VariablesProyecto.Unidad_De_Investigacion" value="" />
+                </div>
+
+                <div id="contenedor_fecha-inicio-estimada" hidden>
+                    <label class="lb-variable" for="Fecha_Inicio_Estimada">Fecha de Inicio Estimada</label><br />
+                    <input asp-for="VariablesProyecto.Fecha_Inicio_Estimada" value="" placeholder="AAAA-MM-DD o AAAA" />
+                </div>
+
+                <div id="contenedor_fecha-inicio-real" hidden>
+                    <label class="lb-variable" for="Fecha_Inicio_Real">Fecha de Inicio Real</label><br />
+                    <input asp-for="VariablesProyecto.Fecha_Inicio_Real" value="" placeholder="AAAA-MM-DD o AAAA" />
+                </div>
+
+                <div id="contenedor_fecha-finalizacion-estimada" hidden>
+                    <label class="lb-variable" for="Fecha_Finalizacion_Estimada">Fecha Finalización Estimada</label><br />
+                    <input asp-for="VariablesProyecto.Fecha_Finalizacion_Estimada" value="" placeholder="AAAA-MM-DD o AAAA" />
+                </div>
+
+                <div id="contenedor_fecha-finalizacion-real" hidden>
+                    <label class="lb-variable" for="Fecha_Finalizacion_Real">Fecha Finalización Real</label><br />
+                    <input asp-for="VariablesProyecto.Fecha_Finalizacion_Real" value="" placeholder="AAAA-MM-DD o AAAA" />
+                </div>
+
+                <div id="contenedor_canton" hidden>
+                    <label class="lb-variable" for="Canton">Cantón</label><br />
+                    <input asp-for="VariablesProyecto.Canton" value="" />
+                </div>
+
+                <div id="contenedor_objetivo-de-desarrollo-sostenible" hidden>
+                    <label class="lb-variable" for="Objetivo_De_Desarrollo_Sostenible">Objetivo Desarrollo Sostenible</label><br />
+                    <input asp-for="VariablesProyecto.Objetivo_De_Desarrollo_Sostenible" value="" />
+                </div>
+
             </div>
         
             <div class="form-contenedor-botones">
-                <button class="btn" type="submit">Enviar</button>
+                <button disabled id="btnSubmit" class="btn" type="submit">Enviar</button>
                 <button class="btn" type="reset">Limpiar</button>
             </div>
         </form>
     </div>
 </section>
 
+<script src="~/js/ValidacionesYEventos.js" asp-append-version="true"></script>
+@await Html.PartialAsync("_VentanaModal")
 
 @section Scripts
 {
@@ -55,7 +119,12 @@
 
        validarCantidadCheckboxActivos();
        agregarEventoToggle(variables);
-       validarFormulario();
+       cambiarEstadoBtnSubmit();
     </script>
 }
-   
+
+@if (Model.Errores.Count > 0)
+{
+    <script>mostrarVentanaModal('Error', @Html.Raw(JsonConvert.SerializeObject(Model.Errores)))</script>
+}
+
