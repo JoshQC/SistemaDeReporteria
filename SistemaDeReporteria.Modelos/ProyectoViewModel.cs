@@ -10,32 +10,19 @@ namespace SistemaDeReporteria.Modelos
     {
         public ProyectoViewModel()
         {
-            Estados = new List<string>
-            {
-                "En Revisión",
-                "Activo",
-                "Finalizado",
-                "Cancelado",
-                "Inactivo",
-                "Rechazado"
-            };
+            Estados = DatosSelect.Estados;
 
-            Tipos = new List<string>
-            {
-                "Investigación Básica",
-                "Investigación Aplicada",
-                "Desarrollo Tecnológico"
-            };
+            Tipos = DatosSelect.Tipos;
 
-            Regiones = new List<string>
-            {
-                "Central",
-                "Brunca",
-                "Chorotega",
-                "Huetar Atlántica",
-                "Huetar Norte",
-                "Pacífico Central"
-            };
+            Regiones = DatosSelect.Regiones;
+
+            AreaCientifica = DatosSelect.AreasConocimiento;
+
+            ObjetivosSocioEconomicos = DatosSelect.ObjetivosSocioEconomicos;
+
+            EjesDePlanes = DatosSelect.EjesDePlanes;
+
+            ObjetivosDesarrolloSostenible = DatosSelect.ObjetivosDesarrolloSostenible;
 
             VariablesProyecto = new();
             Errores = new();
@@ -45,6 +32,10 @@ namespace SistemaDeReporteria.Modelos
         public List<string> Estados { get; set; }
         public List<string> Tipos { get; set; }
         public List<string> Regiones { get; set; }
+        public List<string> AreaCientifica { get; set; }
+        public List<string> ObjetivosSocioEconomicos { get; set; }
+        public List<string> EjesDePlanes { get; set; }
+        public List<string> ObjetivosDesarrolloSostenible { get; set; }
         public List<string> Errores { get; set; }
     }
 }

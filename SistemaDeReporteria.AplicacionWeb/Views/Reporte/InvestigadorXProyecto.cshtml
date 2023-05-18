@@ -66,7 +66,9 @@
 
                 <div  id="contenedor_area-cientifica" hidden>
                     <label class="lb-variable" for="Area_Cientifica">Area Cientifica</label><br />
-                    <input asp-for="VariablesInvestigadorXProyecto.Area_Cientifica" value="" />
+                    <select asp-for="VariablesInvestigadorXProyecto.Area_Cientifica" asp-items="@(new SelectList(Model.AreaCientifica))">
+                        <option selected value=""></option>
+                    </select>
                 </div>
 
                 <div  id="contenedor_edad-minima" hidden>

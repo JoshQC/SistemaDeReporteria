@@ -49,17 +49,23 @@
 
                 <div id="contenedor_area-cientifica" hidden>
                     <label class="lb-variable" for="Area_Cientifica">Area Cientifica</label><br />
-                    <input asp-for="VariablesProyecto.Area_Cientifica" value="" />
+                    <select asp-for="VariablesProyecto.Area_Cientifica" asp-items="@(new SelectList(Model.AreaCientifica))">
+                        <option selected value=""></option>
+                    </select>
                 </div>
 
                 <div id="contenedor_objetivo-socioeconomico" hidden>
                     <label class="lb-variable" for="Objetivo_Socioeconomico">Objetivo Socioeconómico</label><br />
-                    <input asp-for="VariablesProyecto.Objetivo_Socioeconomico" value="" />
+                    <select asp-for="VariablesProyecto.Objetivo_Socioeconomico" asp-items="@(new SelectList(Model.ObjetivosSocioEconomicos))">
+                        <option selected value=""></option>
+                    </select>
                 </div>
 
                 <div id="contenedor_eje-de-planes" hidden>
                     <label class="lb-variable" for="Eje_De_Planes">Eje de Planes</label><br />
-                    <input asp-for="VariablesProyecto.Eje_De_Planes" value="" />
+                    <select asp-for="VariablesProyecto.Eje_De_Planes" asp-items="@(new SelectList(Model.EjesDePlanes))">
+                        <option selected value=""></option>
+                    </select>
                 </div>
 
                 <div id="contenedor_unidad-de-investigacion" hidden>
@@ -94,7 +100,9 @@
 
                 <div id="contenedor_objetivo-de-desarrollo-sostenible" hidden>
                     <label class="lb-variable" for="Objetivo_De_Desarrollo_Sostenible">Objetivo Desarrollo Sostenible</label><br />
-                    <input asp-for="VariablesProyecto.Objetivo_De_Desarrollo_Sostenible" value="" />
+                    <select asp-for="VariablesProyecto.Objetivo_De_Desarrollo_Sostenible" asp-items="@(new SelectList(Model.ObjetivosDesarrolloSostenible))">
+                        <option selected value=""></option>
+                    </select>
                 </div>
 
             </div>

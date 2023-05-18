@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace SistemaDeReporteria.Modelos
 {
@@ -10,15 +6,9 @@ namespace SistemaDeReporteria.Modelos
     {
         public InvestigadorXProyectoViewModel() 
         {
-            Estados = new List<string> 
-            { 
-                "En Revisión",
-                "Activo",
-                "Finalizado",
-                "Cancelado",
-                "Inactivo",
-                "Rechazado"
-            };
+            Estados = DatosSelect.Estados;
+
+            AreaCientifica = DatosSelect.AreasConocimiento;
 
             VariablesInvestigadorXProyecto = new();
             Errores = new();
@@ -26,6 +16,7 @@ namespace SistemaDeReporteria.Modelos
 
         public VariablesInvestigadorXProyecto VariablesInvestigadorXProyecto { get; set; }
         public List<string> Estados { get; set; }
+        public List<string> AreaCientifica { get; set; }
         public List<string> Errores { get; set; }
     }
 }
