@@ -64,7 +64,7 @@ namespace SistemaDeReporteria.LogicaDeNegocio
             {
                 Proyectos = null,
                 ColumnasTabla = nombresDeColumnasDeTabla,
-                Chart = new Chart("graphic", "bar", new List<string>() { "Proyectos" }, "Cantidad De Proyectos", new List<int>() { proyectos.Count }),
+                Chart = new Chart("graphic", "bar", new List<string>() { "Proyectos" }, "Cantidad De Proyectos", new List<int>() { ContarProyectosXInvestigador(proyectos) }),
                 Investigadores = null,
                 TituloVista = "Listar Proyectos por " + UnirElementosEnLista(propiedadesUsadas),
                 ProyectosXInvestigadores = proyectos
@@ -180,6 +180,21 @@ namespace SistemaDeReporteria.LogicaDeNegocio
             }
 
             return resultado;
+        }
+
+        private int ContarProyectosXInvestigador(List<ProyectoXInvestigador> proyectos) 
+        {
+            HashSet<string> codigosUnicos = new HashSet<string>();
+
+            foreach (var proyecto in proyectos)
+            {
+                if (proyecto != null && proyecto.Codigo != null)
+                {
+                    codigosUnicos.Add(proyecto.Codigo);
+                }
+            }
+
+            return codigosUnicos.Count;
         }
     }
 }
