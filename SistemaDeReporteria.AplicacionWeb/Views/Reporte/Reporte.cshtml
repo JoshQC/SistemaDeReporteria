@@ -55,10 +55,41 @@
                             <td>@investigador.CorreoPrincipal</td>
                             <td>@investigador.GradoAcademico</td>
                             <td>@investigador.Edad</td>
-                            <td>@(investigador.Sexo == 1 ? "Masculino" : "Femenina")</td>
+                            <td>
+                                @if (investigador.Sexo.HasValue)
+                                {
+                                    @(investigador.Sexo == 1 ? "Masculino" : "Femenina")
+                                }
+                                else
+                                {
+                                    <span></span>
+                                }
+                            </td>
                         </tr>
                     }
                 }
+                else if (Model.ProyectosXInvestigadores != null)
+                {
+
+                    @foreach (var proyecto in Model.ProyectosXInvestigadores)
+                    {
+                        <tr>
+                            <td>@proyecto.Codigo</td>
+                            <td>@proyecto.Titulo</td>
+                            <td>@proyecto.Estado</td>
+                            <td>@proyecto.Tipo</td>
+                            <td>@proyecto.AreaConocimiento</td>
+                            <td>@proyecto.ObjetivoSocioEconomico</td>
+                            <td>@proyecto.EjeDePlanes</td>
+                            <td>@proyecto.UnidadInvestigacion</td>
+                            <td>@proyecto.FechaInicioEstimada</td>
+                            <td>@proyecto.FechaInicioReal</td>
+                            <td>@proyecto.FechaFinalizacionEstimada</td>
+                            <td>@proyecto.FechaFinalizacionReal</td>
+                            <td>@proyecto.Edad</td>
+                            <td>@proyecto.Investigador</td>
+                        </tr>
+                    }}
             </tbody>
             <tfoot></tfoot>
         </table>

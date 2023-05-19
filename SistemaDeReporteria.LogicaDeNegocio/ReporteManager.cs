@@ -40,7 +40,8 @@ namespace SistemaDeReporteria.LogicaDeNegocio
                 ColumnasTabla = nombresDeColumnasDeTabla,
                 Chart = new Chart("graphic", "bar", new List<string>() { "Proyectos" }, "Cantidad De Proyectos", new List<int>() { proyectos.Count }),
                 Investigadores = null,
-                TituloVista = "Listar Proyectos por " + UnirElementosEnLista(propiedadesUsadas)
+                TituloVista = "Listar Proyectos por " + UnirElementosEnLista(propiedadesUsadas),
+                ProyectosXInvestigadores = null
             };
 
             return viewModel;
@@ -56,16 +57,17 @@ namespace SistemaDeReporteria.LogicaDeNegocio
 
             if (proyectos.Count == 0) throw new NoData("No se encontraron coincidencias con los valores sugeridos");
 
-            var nombresDeColumnasDeTabla = ObtenerNombresDePropiedades(typeof(Proyecto));
+            var nombresDeColumnasDeTabla = ObtenerNombresDePropiedades(typeof(ProyectoXInvestigador));
             List<string> propiedadesUsadas = PropiedadPoblada.ObtenerPropiedades(variablesInvestigadorXProyecto);
 
             ReporteViewModel viewModel = new ReporteViewModel
             {
-                Proyectos = proyectos,
+                Proyectos = null,
                 ColumnasTabla = nombresDeColumnasDeTabla,
                 Chart = new Chart("graphic", "bar", new List<string>() { "Proyectos" }, "Cantidad De Proyectos", new List<int>() { proyectos.Count }),
                 Investigadores = null,
-                TituloVista = "Listar Proyectos por " + UnirElementosEnLista(propiedadesUsadas)
+                TituloVista = "Listar Proyectos por " + UnirElementosEnLista(propiedadesUsadas),
+                ProyectosXInvestigadores = proyectos
             };
 
             return viewModel;
@@ -90,7 +92,8 @@ namespace SistemaDeReporteria.LogicaDeNegocio
                 ColumnasTabla = nombresDeColumnasDeTabla,
                 Chart = new Chart("graphic", "bar", new List<string>() { "Investigadores" }, "Cantidad De Investigadores", new List<int>() { investigadores.Count }),
                 Investigadores = investigadores,
-                TituloVista = "Listar Proyectos por " + UnirElementosEnLista(propiedadesUsadas)
+                TituloVista = "Listar Proyectos por " + UnirElementosEnLista(propiedadesUsadas),
+                ProyectosXInvestigadores = null
             };
 
             return viewModel;
@@ -125,20 +128,34 @@ namespace SistemaDeReporteria.LogicaDeNegocio
             return datos;
         }
 
-        private List<string> ObtenerNombresDePropiedades(Type tipo) 
+        private List<string> ObtenerNombresDePropiedades(Type tipo)
         {
-            List<string> nombres = new List<string>();
+            HashSet<string> nombres = new HashSet<string>();
+
+            Type tipoBase = tipo.BaseType;
+
+            if (tipoBase != null)
+            {
+                PropertyInfo[] propiedadesPadre = tipoBase.GetProperties();
+
+                foreach (PropertyInfo propiedadPadre in propiedadesPadre)
+                {
+                    string[] palabras = Regex.Split(propiedadPadre.Name, @"(?<!^)(?=[A-Z])");
+                    string nombrePropiedad = string.Join(" ", palabras);
+                    nombres.Add(nombrePropiedad);
+                }
+            }
 
             PropertyInfo[] propiedades = tipo.GetProperties();
 
             foreach (PropertyInfo propiedad in propiedades)
             {
                 string[] palabras = Regex.Split(propiedad.Name, @"(?<!^)(?=[A-Z])");
-                string nombrePropiedad = String.Join(" ", palabras);
+                string nombrePropiedad = string.Join(" ", palabras);
                 nombres.Add(nombrePropiedad);
             }
 
-            return nombres;
+            return nombres.ToList();
         }
 
         private string UnirElementosEnLista(List<string> elementos) 

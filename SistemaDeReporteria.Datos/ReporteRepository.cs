@@ -122,9 +122,9 @@ namespace SistemaDeReporteria.Datos
             return proyectos;
         }
 
-        public List<Proyecto> getProyectosPorVariablesInvestigadorXProyecto(VariablesInvestigadorXProyecto variablesInvestigadorXProyecto) 
+        public List<ProyectoXInvestigador> getProyectosPorVariablesInvestigadorXProyecto(VariablesInvestigadorXProyecto variablesInvestigadorXProyecto) 
         {
-            List<Proyecto> proyectos = new List<Proyecto>();
+            List<ProyectoXInvestigador> proyectos = new();
 
             using (SqlConnection conn = new SqlConnection(connectionString)) 
             {
@@ -167,7 +167,7 @@ namespace SistemaDeReporteria.Datos
                 {
                     while (reader.Read()) 
                     {
-                        Proyecto proyecto = new Proyecto();
+                        ProyectoXInvestigador proyecto = new();
 
                         proyecto.Codigo = reader["Codigo"].ToString();
                         proyecto.Titulo = reader["Titulo"].ToString();
@@ -181,6 +181,8 @@ namespace SistemaDeReporteria.Datos
                         proyecto.FechaInicioReal = reader["FechaInicioReal"] == DBNull.Value ? null : ((DateTime)reader["FechaInicioReal"]).ToString("yyyy-MM-dd");
                         proyecto.FechaFinalizacionEstimada = reader["FechaFinalizacionEstimada"] == DBNull.Value ? null : ((DateTime)reader["FechaFinalizacionEstimada"]).ToString("yyyy-MM-dd");
                         proyecto.FechaFinalizacionReal = reader["FechaFinalizacionReal"] == DBNull.Value ? null : ((DateTime)reader["FechaFinalizacionReal"]).ToString("yyyy-MM-dd");
+                        proyecto.Edad = reader["Edad"] != DBNull.Value ? Convert.ToInt32(reader["Edad"]) : (int?)null;
+                        proyecto.Investigador = reader["Investigador"].ToString();
 
                         proyectos.Add(proyecto);
                     }
@@ -235,8 +237,8 @@ namespace SistemaDeReporteria.Datos
                         investigador.Identificacion = reader["Identificacion"].ToString();
                         investigador.CorreoPrincipal = reader["CorreoPrincipal"].ToString();
                         investigador.GradoAcademico = reader["GradoAcademico"].ToString();
-                        investigador.Edad = Convert.ToInt32(reader["Edad"]);
-                        investigador.Sexo = Convert.ToInt32(reader["Sexo"]);
+                        investigador.Edad = reader["Edad"] != DBNull.Value ? Convert.ToInt32(reader["Edad"]) : (int?)null;
+                        investigador.Sexo = reader["Sexo"] != DBNull.Value ? Convert.ToInt32(reader["Sexo"]) : (int?)null;
 
                         investigadores.Add(investigador);
                     }
