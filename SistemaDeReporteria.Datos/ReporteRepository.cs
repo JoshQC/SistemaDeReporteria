@@ -247,5 +247,39 @@ namespace SistemaDeReporteria.Datos
 
             return investigadores;
         }
+
+        public List<string> GetValoresSelect(string tabla)
+        {
+            List<string> lista = new List<string>();
+
+            string query = $"SELECT Nombre FROM {tabla}";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        int nombreOrdinal = reader.GetOrdinal("Nombre"); 
+
+                        while (reader.Read())
+                        {
+                            if (!reader.IsDBNull(nombreOrdinal)) 
+                            {
+                                string nombre = reader.GetString(nombreOrdinal);
+                                lista.Add(nombre);
+                            }
+                        }
+                    }
+
+                    conn.Close();
+                }
+            }
+
+            return lista;
+        }
+
     }
 }

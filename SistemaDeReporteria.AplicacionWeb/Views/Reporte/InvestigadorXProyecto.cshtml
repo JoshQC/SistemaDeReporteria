@@ -44,14 +44,21 @@
                 }
             }
         </fieldset>
-    
+
         <form asp-controller="Reporte" asp-action="ObtenerProyectosXInvestigador" method="get">
             <div>
                 <div  id="contenedor_estado" hidden>
                     <label class="lb-variable" for="Estado">Estado</label><br />
-                    <select asp-for="VariablesInvestigadorXProyecto.Estado" asp-items="@(new SelectList(Model.Estados))">
-                        <option selected value=""></option>
-                    </select>
+                    @if (Model.Estados != null)
+                    {
+                        <select asp-for="VariablesInvestigadorXProyecto.Estado" asp-items="@(new SelectList(Model.Estados))">
+                            <option selected value=""></option>
+                        </select>
+                    }
+                    else
+                    {
+                        <input asp-for="VariablesInvestigadorXProyecto.Estado" value="" />
+                    }
                 </div>
 
                 <div  id="contenedor_nombre-del-investigador" hidden>
@@ -66,9 +73,16 @@
 
                 <div  id="contenedor_area-cientifica" hidden>
                     <label class="lb-variable" for="Area_Cientifica">Area Cientifica</label><br />
-                    <select asp-for="VariablesInvestigadorXProyecto.Area_Cientifica" asp-items="@(new SelectList(Model.AreaCientifica))">
-                        <option selected value=""></option>
-                    </select>
+                    @if (Model.AreaCientifica != null)
+                    {
+                        <select asp-for="VariablesInvestigadorXProyecto.Area_Cientifica" asp-items="@(new SelectList(Model.AreaCientifica))">
+                            <option selected value=""></option>
+                        </select>
+                    }
+                    else
+                    {
+                        <input asp-for="VariablesInvestigadorXProyecto.Area_Cientifica" value="" />
+                    }
                 </div>
 
                 <div  id="contenedor_edad-minima" hidden>

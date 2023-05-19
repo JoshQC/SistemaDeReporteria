@@ -1,6 +1,9 @@
-﻿using SistemaDeReporteria.Datos;
+﻿using Microsoft.Extensions.Caching.Memory;
+using SistemaDeReporteria.Datos;
 using SistemaDeReporteria.Modelos;
+using System.Net.Http.Headers;
 using System.Reflection;
+using System.Runtime.ConstrainedExecution;
 using System.Security.Cryptography.X509Certificates;
 using System.Text.RegularExpressions;
 
@@ -9,10 +12,13 @@ namespace SistemaDeReporteria.LogicaDeNegocio
     public class ReporteManager
     {
         private IReporteRepository repositorio;
+        private readonly IMemoryCache memoryCache;
+        private const int TIEMPO_ESPERA = 30;
 
-        public ReporteManager()
+        public ReporteManager(IMemoryCache memoryCache)
         {
             this.repositorio = new ReporteRepository();
+            this.memoryCache = memoryCache;
         }
 
         public ReporteViewModel obtenerViewModelDeProyectosPorVariablesDeProyecto(VariablesProyecto variablesProyecto)
@@ -88,6 +94,35 @@ namespace SistemaDeReporteria.LogicaDeNegocio
             };
 
             return viewModel;
+        }
+
+        public DatosSelect obtenerValoresDeSelect()
+        {
+            DatosSelect datos;
+
+            if (memoryCache.TryGetValue("DatosSelectCache", out datos))
+            {
+                return datos;
+            }
+
+            datos = new DatosSelect();
+            
+            try 
+            {
+                datos.AreasConocimiento = repositorio.GetValoresSelect("AreasConocimiento");
+                datos.Estados = repositorio.GetValoresSelect("EstadosProyecto");
+                datos.EjesDePlanes = repositorio.GetValoresSelect("EjesDePlanes");
+                datos.ObjetivosSocioEconomicos = repositorio.GetValoresSelect("ObjetivosSocioEconomicos");
+                datos.ObjetivosDesarrolloSostenible = repositorio.GetValoresSelect("ObjetivosDesarrolloSostenible");
+                datos.Tipos = repositorio.GetValoresSelect("TiposProyecto");
+                datos.Regiones = repositorio.GetValoresSelect("Regiones");
+
+                memoryCache.Set("DatosSelectCache", datos, TimeSpan.FromMinutes(TIEMPO_ESPERA));
+            }
+            catch(Exception)
+            { }   
+         
+            return datos;
         }
 
         private List<string> ObtenerNombresDePropiedades(Type tipo) 

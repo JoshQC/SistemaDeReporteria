@@ -166,3 +166,8 @@ D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\obj\De
 D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\obj\Debug\net6.0\SistemaDeReporteria.AplicacionWeb.pdb
 D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\obj\Debug\net6.0\SistemaDeReporteria.AplicacionWeb.genruntimeconfig.cache
 D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\obj\Debug\net6.0\ref\SistemaDeReporteria.AplicacionWeb.dll
+D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.Options.dll

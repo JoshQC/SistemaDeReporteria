@@ -8,34 +8,34 @@ namespace SistemaDeReporteria.Modelos
 {
     public class ProyectoViewModel
     {
-        public ProyectoViewModel()
+        public ProyectoViewModel(DatosSelect datos)
         {
-            Estados = DatosSelect.Estados;
+            Estados = datos.Estados;
 
-            Tipos = DatosSelect.Tipos;
+            Tipos = datos.Tipos;
 
-            Regiones = DatosSelect.Regiones;
+            Regiones = datos.Regiones;
 
-            AreaCientifica = DatosSelect.AreasConocimiento;
+            AreaCientifica = datos.AreasConocimiento;
 
-            ObjetivosSocioEconomicos = DatosSelect.ObjetivosSocioEconomicos;
+            ObjetivosSocioEconomicos = datos.ObjetivosSocioEconomicos;
 
-            EjesDePlanes = DatosSelect.EjesDePlanes;
+            EjesDePlanes = datos.EjesDePlanes;
 
-            ObjetivosDesarrolloSostenible = DatosSelect.ObjetivosDesarrolloSostenible;
+            ObjetivosDesarrolloSostenible = datos.ObjetivosDesarrolloSostenible;
 
             VariablesProyecto = new();
             Errores = new();
         }
 
         public VariablesProyecto VariablesProyecto { get; set; }
-        public List<string> Estados { get; set; }
-        public List<string> Tipos { get; set; }
-        public List<string> Regiones { get; set; }
-        public List<string> AreaCientifica { get; set; }
-        public List<string> ObjetivosSocioEconomicos { get; set; }
-        public List<string> EjesDePlanes { get; set; }
-        public List<string> ObjetivosDesarrolloSostenible { get; set; }
+        public List<string>? Estados { get; set; }
+        public List<string>? Tipos { get; set; }
+        public List<string>? Regiones { get; set; }
+        public List<string>? AreaCientifica { get; set; }
+        public List<string>? ObjetivosSocioEconomicos { get; set; }
+        public List<string>? EjesDePlanes { get; set; }
+        public List<string>? ObjetivosDesarrolloSostenible { get; set; }
         public List<string> Errores { get; set; }
     }
 }

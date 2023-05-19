@@ -4,18 +4,21 @@ using SistemaDeReporteria.Modelos;
 using System.Diagnostics;
 using SistemaDeReporteria.LogicaDeNegocio;
 using System.Data.SqlClient;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace SistemaDeReporteria.AplicacionWeb.Controllers
 {
     public class ReporteController : Controller
     {
         private readonly ILogger<ReporteController> _logger;
+        private readonly IMemoryCache memoryCache;
         private ReporteManager _reporteManager;
 
-        public ReporteController(ILogger<ReporteController> logger)
+        public ReporteController(ILogger<ReporteController> logger, IMemoryCache memoryCache)
         {
             _logger = logger;
-            _reporteManager = new ReporteManager();
+            this.memoryCache = memoryCache;
+            _reporteManager = new ReporteManager(memoryCache);
         }
 
         public IActionResult Index()
@@ -25,13 +28,13 @@ namespace SistemaDeReporteria.AplicacionWeb.Controllers
 
         public IActionResult Proyecto()
         {
-            return View(new ProyectoViewModel());
+            return View(new ProyectoViewModel(_reporteManager.obtenerValoresDeSelect()));
         }
 
         [HttpGet]
         public IActionResult ObtenerProyectos(VariablesProyecto variablesProyecto)
         {
-            var varProyViewModel = new ProyectoViewModel();
+            var varProyViewModel = new ProyectoViewModel(_reporteManager.obtenerValoresDeSelect());
             var error = new List<string>();
 
             try
@@ -115,13 +118,13 @@ namespace SistemaDeReporteria.AplicacionWeb.Controllers
 
         public IActionResult InvestigadorXProyecto()
         {
-            return View(new InvestigadorXProyectoViewModel());
+            return View(new InvestigadorXProyectoViewModel(_reporteManager.obtenerValoresDeSelect()));
         }
 
         [HttpGet]
         public IActionResult ObtenerProyectosXInvestigador(VariablesInvestigadorXProyecto variablesInvestigadorXProyecto)
         {
-            var varInvXproyViewModel = new InvestigadorXProyectoViewModel();
+            var varInvXproyViewModel = new InvestigadorXProyectoViewModel(_reporteManager.obtenerValoresDeSelect());
             var error = new List<string>();
 
             try
