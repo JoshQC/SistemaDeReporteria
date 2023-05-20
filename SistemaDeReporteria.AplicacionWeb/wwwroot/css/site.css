@@ -48,6 +48,9 @@ a {
         font-size: 1.1rem;
         margin-right: 1.5rem;
     }
+        .nav-bar a:visited {
+            color: var(--navBar-a-color);
+        }
 
         .nav-bar a:hover {
             color: var(--navBar-a-color-hover);
