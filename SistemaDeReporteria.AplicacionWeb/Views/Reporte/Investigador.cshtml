@@ -48,6 +48,7 @@
         <form asp-controller="Reporte" asp-action="ObtenerInvestigadores" method="get">
             <div>
                 <div id="contenedor_grado-academico" hidden>
+                    <label class="lb-variable" for="Grado_Academico">Grado Academico</label><br />
                     @if (Model.GradosAcademicos != null)
                     {
                         <select asp-for="VariablesInvestigador.Grado_Academico" asp-items="@(new SelectList(Model.GradosAcademicos))">

@@ -85,19 +85,28 @@ namespace SistemaDeReporteria.Modelos
                 }
             }
 
-            foreach (PropertyInfo propiedad in propiedades)
+            bool todasPropiedadesNulas = propiedades.All(p => p.GetValue(instancia) == null || (p.GetValue(instancia) != null && p.GetValue(instancia).Equals(0)));
+
+            if (todasPropiedadesNulas)
             {
-                string nombrePropiedad = propiedad.Name;
-                string? valorPropiedad = propiedad.GetValue(instancia)?.ToString();
-
-                PropiedadValidacion propiedadValidacion = ObtenerPropiedadesDeValidacion(nombrePropiedad);
-
-                if (!string.IsNullOrEmpty(valorPropiedad) && propiedadValidacion != null)
+                Errores.Add("Debe ingresar al menos una entrada con valor");
+            }
+            else 
+            {
+                foreach (PropertyInfo propiedad in propiedades)
                 {
-                    Regex regex = new Regex(propiedadValidacion.Patron);
-                    if (!regex.IsMatch(valorPropiedad))
+                    string nombrePropiedad = propiedad.Name;
+                    string? valorPropiedad = propiedad.GetValue(instancia)?.ToString();
+
+                    PropiedadValidacion propiedadValidacion = ObtenerPropiedadesDeValidacion(nombrePropiedad);
+
+                    if (!string.IsNullOrEmpty(valorPropiedad) && propiedadValidacion != null)
                     {
-                        Errores.Add(propiedadValidacion.MensajeError);
+                        Regex regex = new Regex(propiedadValidacion.Patron);
+                        if (!regex.IsMatch(valorPropiedad))
+                        {
+                            Errores.Add(propiedadValidacion.MensajeError);
+                        }
                     }
                 }
             }
