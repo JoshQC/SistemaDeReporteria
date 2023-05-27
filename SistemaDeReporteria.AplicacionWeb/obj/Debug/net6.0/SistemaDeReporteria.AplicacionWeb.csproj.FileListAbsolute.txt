@@ -107,13 +107,18 @@ D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\De
 D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\SistemaDeReporteria.AplicacionWeb.runtimeconfig.json
 D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\SistemaDeReporteria.AplicacionWeb.dll
 D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\SistemaDeReporteria.AplicacionWeb.pdb
+D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
 D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.Configuration.FileExtensions.dll
 D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Json.dll
+D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
 D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll
 D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
 D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Newtonsoft.Json.dll
@@ -166,8 +171,3 @@ D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\obj\De
 D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\obj\Debug\net6.0\SistemaDeReporteria.AplicacionWeb.pdb
 D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\obj\Debug\net6.0\SistemaDeReporteria.AplicacionWeb.genruntimeconfig.cache
 D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\obj\Debug\net6.0\ref\SistemaDeReporteria.AplicacionWeb.dll
-D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
-D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
-D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
-D:\Proyectos Progra\SistemaDeReporteria\SistemaDeReporteria.AplicacionWeb\bin\Debug\net6.0\Microsoft.Extensions.Options.dll

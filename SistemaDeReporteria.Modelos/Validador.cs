@@ -63,28 +63,6 @@ namespace SistemaDeReporteria.Modelos
             Type tipo = instancia.GetType();
             PropertyInfo[] propiedades = tipo.GetProperties();
 
-            PropertyInfo edadMinimaPropiedad = propiedades.FirstOrDefault(p => p.Name == "Edad_Minima");
-            PropertyInfo edadMaximaPropiedad = propiedades.FirstOrDefault(p => p.Name == "Edad_Maxima");
-
-            if (edadMinimaPropiedad != null && edadMaximaPropiedad != null)
-            {
-                int edadMinima = (int)edadMinimaPropiedad.GetValue(instancia);
-                int edadMaxima = (int)edadMaximaPropiedad.GetValue(instancia);
-
-                if (edadMinima != 0 && edadMaxima != 0)
-                {
-                    if (edadMaxima <= edadMinima)
-                    {
-                        Errores.Add("La Edad Maxima debe ser mayor a Edad Minima");
-                    }
-                }
-
-                if (edadMinima < 0 || edadMaxima < 0) 
-                {
-                    Errores.Add("Los campos de Edad no admiten valores negativos");
-                }
-            }
-
             bool todasPropiedadesNulas = propiedades.All(p => p.GetValue(instancia) == null || (p.GetValue(instancia) != null && p.GetValue(instancia).Equals(0)));
 
             if (todasPropiedadesNulas)
@@ -93,6 +71,28 @@ namespace SistemaDeReporteria.Modelos
             }
             else 
             {
+                PropertyInfo edadMinimaPropiedad = propiedades.FirstOrDefault(p => p.Name == "Edad_Minima");
+                PropertyInfo edadMaximaPropiedad = propiedades.FirstOrDefault(p => p.Name == "Edad_Maxima");
+
+                if (edadMinimaPropiedad != null && edadMaximaPropiedad != null)
+                {
+                    int edadMinima = (int)edadMinimaPropiedad.GetValue(instancia);
+                    int edadMaxima = (int)edadMaximaPropiedad.GetValue(instancia);
+
+                    if (edadMinima != 0 && edadMaxima != 0)
+                    {
+                        if (edadMaxima <= edadMinima)
+                        {
+                            Errores.Add("La Edad Maxima debe ser mayor a Edad Minima");
+                        }
+                    }
+
+                    if (edadMinima < 0 || edadMaxima < 0)
+                    {
+                        Errores.Add("Los campos de Edad no admiten valores negativos");
+                    }
+                }
+
                 foreach (PropertyInfo propiedad in propiedades)
                 {
                     string nombrePropiedad = propiedad.Name;
