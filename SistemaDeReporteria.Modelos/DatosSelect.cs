@@ -16,5 +16,9 @@ namespace SistemaDeReporteria.Modelos
         public  List<string> EjesDePlanes { get; set; }
 
         public  List<string> ObjetivosDesarrolloSostenible { get; set; }
+
+        public List<string> GradosAcademicos { get; set; } 
+
+        public List<string> UnidadesInvestigacion { get; set; } 
     }
 }

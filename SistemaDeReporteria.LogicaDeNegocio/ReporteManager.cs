@@ -119,6 +119,8 @@ namespace SistemaDeReporteria.LogicaDeNegocio
                 datos.ObjetivosDesarrolloSostenible = repositorio.GetValoresSelect("ObjetivosDesarrolloSostenible");
                 datos.Tipos = repositorio.GetValoresSelect("TiposProyecto");
                 datos.Regiones = repositorio.GetValoresSelect("Regiones");
+                datos.GradosAcademicos = repositorio.GetValoresSelect("GradosAcademicos");
+                datos.UnidadesInvestigacion = repositorio.GetValoresSelect("UnidadesInvestigacion");
 
                 memoryCache.Set("DatosSelectCache", datos, TimeSpan.FromMinutes(TIEMPO_ESPERA));
             }

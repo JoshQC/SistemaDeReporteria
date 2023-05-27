@@ -24,6 +24,8 @@ namespace SistemaDeReporteria.Modelos
 
             ObjetivosDesarrolloSostenible = datos.ObjetivosDesarrolloSostenible;
 
+            UnidadesInvestigacion = datos.UnidadesInvestigacion;
+
             VariablesProyecto = new();
             Errores = new();
         }
@@ -36,6 +38,7 @@ namespace SistemaDeReporteria.Modelos
         public List<string>? ObjetivosSocioEconomicos { get; set; }
         public List<string>? EjesDePlanes { get; set; }
         public List<string>? ObjetivosDesarrolloSostenible { get; set; }
+        public List<string>? UnidadesInvestigacion { get; set; }
         public List<string> Errores { get; set; }
     }
 }

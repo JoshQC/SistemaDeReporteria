@@ -48,8 +48,16 @@
         <form asp-controller="Reporte" asp-action="ObtenerInvestigadores" method="get">
             <div>
                 <div id="contenedor_grado-academico" hidden>
-                    <label class="lb-variable" for="Grado_Academico">Grado Academico</label><br />
-                    <input asp-for="VariablesInvestigador.Grado_Academico" value="" />
+                    @if (Model.GradosAcademicos != null)
+                    {
+                        <select asp-for="VariablesInvestigador.Grado_Academico" asp-items="@(new SelectList(Model.GradosAcademicos))">
+                            <option selected value=""></option>
+                        </select>
+                    }
+                    else
+                    {
+                        <input asp-for="VariablesInvestigador.Grado_Academico" value="" />
+                    }
                 </div>
 
                 <div id="contenedor_edad-minima" hidden>

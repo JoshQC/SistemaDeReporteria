@@ -73,13 +73,13 @@ namespace SistemaDeReporteria.AplicacionWeb.Controllers
 
         public IActionResult Investigador()
         {
-            return View(new InvestigadorViewModel());
+            return View(new InvestigadorViewModel(_reporteManager.obtenerValoresDeSelect()));
         }
 
         [HttpGet]
         public IActionResult ObtenerInvestigadores(VariablesInvestigador variablesInvestigador)
         {
-            var varInvViewModel = new InvestigadorViewModel();
+            var varInvViewModel = new InvestigadorViewModel(_reporteManager.obtenerValoresDeSelect());
             var error = new List<string>();
 
             try

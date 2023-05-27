@@ -112,7 +112,16 @@
 
                 <div id="contenedor_unidad-de-investigacion" hidden>
                     <label class="lb-variable" for="Unidad_De_Investigacion">Unidad de Investigación</label><br />
-                    <input asp-for="VariablesProyecto.Unidad_De_Investigacion" value="" />
+                    @if (Model.UnidadesInvestigacion != null)
+                    {
+                        <select asp-for="VariablesProyecto.Unidad_De_Investigacion" asp-items="@(new SelectList(Model.UnidadesInvestigacion))">
+                            <option selected value=""></option>
+                        </select>
+                    }
+                    else
+                    {
+                        <input asp-for="VariablesProyecto.Unidad_De_Investigacion" value="" />
+                    }
                 </div>
 
                 <div id="contenedor_fecha-inicio-estimada" hidden>
